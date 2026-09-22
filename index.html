@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MasteryHub - Premium Courses</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:#0b1020;
+color:white;
+line-height:1.6
+}
+a{text-decoration:none;color:inherit}
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+max-width:1200px;
+margin:auto
+}
+.logo{
+font-size:25px;
+font-weight:bold;
+color:white
+}
+.logo span{color:#21d4fd}
+nav a{
+margin-left:18px;
+color:#c5cce0;
+font-size:14px
+}
+.btn{
+display:inline-block;
+padding:12px 20px;
+border-radius:8px;
+font-weight:bold;
+font-size:14px
+}
+.primary{
+background:linear-gradient(100deg,#7c5cff,#21a8ff);
+color:white
+}
+.hero{
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center
+}
+.small{
+color:#21d4fd;
+font-size:12px;
+font-weight:bold;
+letter-spacing:2px
+}
+h1{
+font-size:clamp(38px,6vw,68px);
+line-height:1.1;
+margin:18px 0
+}
+h1 span{color:#21d4fd}
+.hero p{
+color:#b7c0d8;
+font-size:17px
+}
+.actions{margin-top:28px}
+.hero-card{
+background:#17223b;
+border:1px solid #34405d;
+border-radius:25px;
+padding:35px;
+min-height:320px;
+display:flex;
+flex-direction:column;
+justify-content:end
+}
+.hero-card h2{
+font-size:35px;
+line-height:1.2;
+margin:15px 0
+}
+.section{
+max-width:1200px;
+margin:auto;
+padding:70px 20px
+}
+.section h2{
+font-size:38px;
+margin:12px 0
+}
+.muted{color:#b7c0d8}
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:30px
+}
+.card{
+background:#121a2e;
+border:1px solid #29334e;
+border-radius:16px;
+overflow:hidden
+}
+.cover{
+height:160px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:bold
+}
+.ai{background:linear-gradient(135deg,#4c1d95,#2563eb)}
+.marketing{background:linear-gradient(135deg,#0f766e,#0891b2)}
+.business{background:linear-gradient(135deg,#9a3412,#c026d3)}
+.card-body{padding:22px}
+.tag{
+color:#21d4fd;
+font-size:11px;
+font-weight:bold
+}
+h3{
+font-size:20px;
+margin:10px 0
+}
+.card-body p{
+color:#b7c0d8;
+font-size:14px;
+min-height:65px
+}
+.card-footer{
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+font-size:12px
+}
+.card-footer strong{color:#a9f7d2}
+.about{
+border-top:1px solid #29334e
+}
+.contact{
+text-align:center;
+border-top:1px solid #29334e
+}
+.contact p{margin:20px 0}
+footer{
+padding:25px 20px;
+text-align:center;
+color:#8e9ab8;
+border-top:1px solid #29334e;
+font-size:12px
+}
+@media(max-width:800px){
+nav{display:none}
+.hero{grid-template-columns:1fr;padding-top:45px}
+.grid{grid-template-columns:1fr}
+h1{font-size:43px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a class="logo" href="#">Mastery<span>Hub</span></a>
+
+<nav>
+<a href="#courses">Courses</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a class="btn primary" href="#courses">Explore</a>
+</header>
+
+<section class="hero">
+
+<div>
+<p class="small">PREMIUM DIGITAL LEARNING</p>
+
+<h1>
+Learn Skills.<br>
+<span>Build Your Future.</span>
+</h1>
+
+<p>
+Explore practical online courses designed
+to help you learn valuable digital skills
+and grow your knowledge.
+</p>
+
+<div class="actions">
+<a class="btn primary" href="#courses">
+Explore Courses
+</a>
+</div>
+</div>
+
+<div class="hero-card">
+<p class="small">MASTER YOUR SKILLS</p>
+
+<h2>
+Learn Today.<br>
+Grow Tomorrow.
+</h2>
+
+<p>Original learning content coming soon.</p>
+</div>
+
+</section>
+
+<section id="courses" class="section">
+
+<p class="small">START LEARNING</p>
+<h2>Featured Courses</h2>
+
+<p class="muted">
+Our premium courses will be published
+with original lessons and practical resources.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="cover ai">AI</div>
+
+<div class="card-body">
+<span class="tag">TECHNOLOGY</span>
+<h3>AI & Automation Fundamentals</h3>
+
+<p>
+Learn AI tools, workflows and practical automation.
+</p>
+
+<div class="card-footer">
+<strong>Coming Soon</strong>
+<span>Beginner</span>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="cover marketing">MARKETING</div>
+
+<div class="card-body">
+<span class="tag">BUSINESS</span>
+<h3>Digital Marketing Essentials</h3>
+
+<p>
+Learn marketing fundamentals, content and customer research.
+</p>
+
+<div class="card-footer">
+<strong>Coming Soon</strong>
+<span>Beginner</span>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="cover business">BUSINESS</div>
+
+<div class="card-body">
+<span class="tag">BUSINESS</span>
+<h3>Online Business Foundations</h3>
+
+<p>
+Explore business planning and digital product basics.
+</p>
+
+<div class="card-footer">
+<strong>Coming Soon</strong>
+<span>Beginner</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="about" class="section about">
+
+<p class="small">ABOUT MASTERYHUB</p>
+
+<h2>Learning Should Be Practical.</h2>
+
+<p class="muted">
+MasteryHub is a digital learning brand focused
+on original and useful educational content.
+</p>
+
+</section>
+
+<section id="contact" class="section contact">
+
+<p class="small">GET IN TOUCH</p>
+
+<h2>Have a Question?</h2>
+
+<p class="muted">
+Contact details will be added before launch.
+</p>
+
+<a class="btn primary" href="mailto:hello@example.com">
+Contact Us
+</a>
+
+</section>
+
+<footer>
+<p>© 2026 MasteryHub. All rights reserved.</p>
+<p>Original Learning Content</p>
+</footer>
+
+</body>
+  </html>
+  
