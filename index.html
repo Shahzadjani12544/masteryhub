@@ -5,692 +5,1194 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MasteryHub | Premium Digital Courses</title>
+<title>MasteryHub | Worldwide Digital Courses</title>
 
-<meta name="description" content="Learn practical digital skills with premium courses, PDFs and video learning bundles.">
+<meta name="description" content="MasteryHub offers original digital courses, PDFs and educational videos for learners worldwide.">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  background: #070b19;
-  color: #ffffff;
-  line-height: 1.6;
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#080d1b;
+  color:#f8fbff;
+  line-height:1.6;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+a{
+  text-decoration:none;
+  color:inherit;
 }
 
-.container {
-  width: 92%;
-  max-width: 1180px;
-  margin: auto;
+.container{
+  width:92%;
+  max-width:1180px;
+  margin:auto;
 }
 
-/* HEADER */
-
-header {
-  padding: 22px 0;
-  border-bottom: 1px solid #202840;
-  background: #070b19;
+header{
+  border-bottom:1px solid #293752;
+  background:#080d1b;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  padding:22px 0;
 }
 
-.logo {
-  font-size: 27px;
-  font-weight: bold;
+.logo{
+  font-size:27px;
+  font-weight:900;
 }
 
-.logo span {
-  color: #20c9f5;
+.logo span{
+  color:#45d7ff;
 }
 
-.nav-links {
-  display: flex;
-  gap: 25px;
-  color: #c3c9df;
+.nav-links{
+  display:flex;
+  gap:22px;
+  color:#b8c5df;
 }
 
-.nav-links a:hover {
-  color: #24c9f5;
+.nav-links a:hover{
+  color:#45d7ff;
 }
 
-.btn {
-  display: inline-block;
-  padding: 13px 24px;
-  border-radius: 12px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  color: white;
-  background: linear-gradient(100deg, #7355ff, #18c9f3);
-  transition: 0.3s;
+.btn{
+  display:inline-block;
+  padding:13px 20px;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:14px;
+  cursor:pointer;
+  text-align:center;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  opacity: 0.9;
+.primary{
+  background:linear-gradient(100deg,#7657ff,#39b9ff);
+  color:white;
 }
 
-.btn-outline {
-  background: transparent;
-  border: 1px solid #34405f;
+.secondary{
+  border:1px solid #34415e;
+  color:#d9e4fb;
 }
 
-/* HERO */
-
-.hero {
-  padding: 90px 0 70px;
-  text-align: center;
+.hero{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
+  align-items:center;
+  padding:80px 0;
 }
 
-.badge {
-  display: inline-block;
-  color: #20c9f5;
-  letter-spacing: 3px;
-  font-size: 13px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.badge{
+  color:#45d7ff;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2px;
 }
 
-.hero h1 {
-  font-size: clamp(38px, 7vw, 72px);
-  line-height: 1.1;
-  max-width: 850px;
-  margin: auto;
+.hero h1{
+  font-size:clamp(40px,6vw,70px);
+  line-height:1.05;
+  margin:18px 0 22px;
 }
 
-.hero h1 span {
-  color: #21c9f4;
+.hero h1 span{
+  color:#45d7ff;
 }
 
-.hero p {
-  max-width: 680px;
-  margin: 25px auto;
-  color: #aeb7d1;
-  font-size: 18px;
+.hero p{
+  color:#b8c5df;
+  font-size:17px;
+  max-width:600px;
 }
 
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 30px;
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
 }
 
-/* STATS */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin: 20px 0 80px;
+.hero-card{
+  min-height:360px;
+  padding:30px;
+  border:1px solid #293752;
+  border-radius:28px;
+  background:radial-gradient(circle at 80% 15%,#354e98,transparent 35%),#111b31;
+  display:flex;
+  flex-direction:column;
+  justify-content:end;
 }
 
-.stat-box {
-  text-align: center;
-  padding: 25px 10px;
-  background: #11182c;
-  border: 1px solid #283452;
-  border-radius: 15px;
+.hero-card h2{
+  font-size:34px;
+  line-height:1.1;
+  margin:15px 0 20px;
 }
 
-.stat-box h2 {
-  color: #24c9f5;
+.muted{
+  color:#b8c5df;
 }
 
-/* SECTION */
-
-.section {
-  padding: 70px 0;
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin:30px 0 70px;
 }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 40px;
+.stat{
+  padding:25px 10px;
+  text-align:center;
+  background:#111b31;
+  border:1px solid #293752;
+  border-radius:16px;
 }
 
-.section-heading h2 {
-  font-size: 38px;
-  margin-bottom: 12px;
+.stat h2{
+  color:#45d7ff;
 }
 
-.section-heading p {
-  color: #aeb7d1;
+.section{
+  padding:70px 0;
 }
 
-/* COURSE CARDS */
-
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+.section-heading{
+  margin-bottom:35px;
+  text-align:center;
 }
 
-.course-card {
-  background: #10182c;
-  border: 1px solid #293653;
-  border-radius: 18px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.3s;
+.section-heading h2{
+  font-size:40px;
+  margin:10px 0 12px;
 }
 
-.course-card:hover {
-  transform: translateY(-6px);
-  border-color: #24c9f5;
+.section-heading p{
+  color:#b8c5df;
 }
 
-.course-icon {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 42px;
-  border-radius: 14px;
-  background: linear-gradient(130deg, #27205d, #123e60);
-  margin-bottom: 20px;
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
-.course-card h3 {
-  font-size: 21px;
-  margin-bottom: 10px;
+.course-card{
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  background:#111b31;
+  border:1px solid #293752;
+  border-radius:18px;
+  transition:.25s;
 }
 
-.course-card p {
-  color: #aeb7d1;
-  font-size: 14px;
-  margin-bottom: 15px;
+.course-card:hover{
+  transform:translateY(-5px);
+  border-color:#45d7ff;
 }
 
-.course-info {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+.course-cover{
+  min-height:155px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  font-size:25px;
+  font-weight:900;
+  background:linear-gradient(135deg,#4c1d95,#2563eb);
 }
 
-.tag {
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  color: #aeefff;
-  background: #183448;
+.course-cover.green{
+  background:linear-gradient(135deg,#0f766e,#0891b2);
 }
 
-.price {
-  margin-top: auto;
-  margin-bottom: 18px;
+.course-cover.orange{
+  background:linear-gradient(135deg,#9a3412,#c026d3);
 }
 
-.old-price {
-  color: #7f8aa5;
-  text-decoration: line-through;
-  margin-right: 8px;
+.course-body{
+  padding:23px;
 }
 
-.new-price {
-  color: #29d2f5;
-  font-size: 25px;
-  font-weight: bold;
+.tag{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:20px;
+  background:#243452;
+  color:#9feaff;
+  font-size:11px;
+  font-weight:bold;
 }
 
-/* WHY US */
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.course-body h3{
+  font-size:21px;
+  line-height:1.25;
+  margin:14px 0 10px;
 }
 
-.feature {
-  padding: 28px;
-  background: #11182c;
-  border: 1px solid #293653;
-  border-radius: 16px;
+.course-body p{
+  color:#b8c5df;
+  font-size:14px;
 }
 
-.feature-icon {
-  font-size: 30px;
-  margin-bottom: 12px;
+.course-list{
+  margin:17px 0;
+  list-style:none;
+  color:#c6d2e8;
+  font-size:14px;
 }
 
-.feature h3 {
-  margin-bottom: 8px;
+.course-list li{
+  margin:6px 0;
 }
 
-.feature p {
-  color: #aeb7d1;
-  font-size: 14px;
+.course-list li::before{
+  content:"✓";
+  color:#45d7ff;
+  font-weight:bold;
+  margin-right:8px;
 }
 
-/* CTA */
-
-.cta {
-  text-align: center;
-  padding: 60px 25px;
-  border-radius: 22px;
-  background: linear-gradient(130deg, #201b53, #103d55);
-  border: 1px solid #344c77;
+.price{
+  margin:18px 0;
+  font-size:25px;
+  font-weight:900;
+  color:#45d7ff;
 }
 
-.cta h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
+.old-price{
+  color:#7d8ba6;
+  text-decoration:line-through;
+  font-size:14px;
+  margin-right:8px;
 }
 
-.cta p {
-  color: #c4cce0;
-  max-width: 600px;
-  margin: 0 auto 25px;
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
-/* CONTACT */
-
-.contact-box {
-  max-width: 600px;
-  margin: auto;
-  padding: 30px;
-  background: #10182c;
-  border: 1px solid #293653;
-  border-radius: 18px;
-  text-align: center;
+.feature{
+  padding:25px;
+  background:#0e172a;
+  border:1px solid #293752;
+  border-radius:16px;
 }
 
-.contact-box p {
-  color: #aeb7d1;
-  margin: 12px 0 25px;
+.feature h3{
+  margin-bottom:8px;
 }
 
-/* FOOTER */
-
-footer {
-  border-top: 1px solid #202840;
-  padding: 30px 0;
-  text-align: center;
-  color: #8793b0;
-  font-size: 14px;
-  margin-top: 70px;
+.feature p{
+  color:#b8c5df;
+  font-size:14px;
 }
 
-/* MOBILE */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
 
-@media (max-width: 850px) {
-  .course-grid {
-    grid-template-columns: repeat(2, 1fr);
+.step{
+  padding:25px;
+  background:#0e172a;
+  border:1px solid #293752;
+  border-radius:16px;
+}
+
+.step strong{
+  font-size:30px;
+  color:#45d7ff;
+}
+
+.step p{
+  color:#b8c5df;
+  margin-top:8px;
+}
+
+.cta{
+  padding:60px 25px;
+  text-align:center;
+  border-radius:22px;
+  background:linear-gradient(130deg,#201b53,#103d55);
+}
+
+.cta h2{
+  font-size:35px;
+  margin-bottom:12px;
+}
+
+.cta p{
+  color:#c4cce0;
+  max-width:650px;
+  margin:0 auto 25px;
+}
+
+.contact{
+  max-width:650px;
+  margin:auto;
+  padding:35px;
+  text-align:center;
+  background:#111b31;
+  border:1px solid #293752;
+  border-radius:22px;
+}
+
+.contact h2{
+  font-size:32px;
+  margin:10px 0;
+}
+
+.contact p{
+  color:#b8c5df;
+  margin:15px 0 25px;
+}
+
+.note{
+  color:#91a2bd;
+  font-size:12px;
+  margin-top:15px;
+}
+
+footer{
+  margin-top:60px;
+  padding:30px 0;
+  text-align:center;
+  color:#8fa0bd;
+  font-size:13px;
+  border-top:1px solid #293752;
+}
+
+@media(max-width:850px){
+
+  .nav-links{
+    display:none;
   }
 
-  .features {
-    grid-template-columns: 1fr;
+  .hero{
+    grid-template-columns:1fr;
+    padding:55px 0;
   }
 
-  .nav-links {
-    display: none;
+  .course-grid{
+    grid-template-columns:repeat(2,1fr);
   }
+
+  .features,
+  .steps{
+    grid-template-columns:1fr;
+  }
+
 }
 
-@media (max-width: 550px) {
-  .hero {
-    padding: 60px 0 40px;
+@media(max-width:550px){
+
+  .course-grid,
+  .stats{
+    grid-template-columns:1fr;
   }
 
-  .hero p {
-    font-size: 16px;
+  .hero h1{
+    font-size:43px;
   }
 
-  .stats {
-    grid-template-columns: 1fr;
-    margin-bottom: 30px;
+  .hero-card{
+    min-height:300px;
   }
 
-  .course-grid {
-    grid-template-columns: 1fr;
+  .section-heading h2{
+    font-size:30px;
   }
 
-  .section-heading h2 {
-    font-size: 30px;
+  .cta h2{
+    font-size:28px;
   }
 
-  .cta h2 {
-    font-size: 28px;
-  }
-
-  .navbar .btn {
-    padding: 10px 15px;
-    font-size: 13px;
-  }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container navbar">
-    <a href="#" class="logo">Mastery<span>Hub</span></a>
+<div class="container navbar">
 
-    <nav class="nav-links">
-      <a href="#courses">Courses</a>
-      <a href="#features">Benefits</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<a href="#top" class="logo">
+Mastery<span>Hub</span>
+</a>
 
-    <a href="#courses" class="btn">Explore Courses</a>
-  </div>
+<nav class="nav-links">
+<a href="#courses">Courses</a>
+<a href="#how">How It Works</a>
+<a href="#features">Benefits</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a href="#courses" class="btn primary">
+Explore Courses
+</a>
+
+</div>
 </header>
 
-<main>
+
+<main id="top">
 
 <section class="hero">
-  <div class="container">
 
-    <div class="badge">PREMIUM DIGITAL LEARNING</div>
+<div>
 
-    <h1>
-      Learn Skills.<br>
-      <span>Build Your Future.</span>
-    </h1>
-
-    <p>
-      Learn practical skills through original courses,
-      downloadable PDFs and educational video content.
-      Study at your own pace and improve your digital future.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#courses" class="btn">Explore Courses</a>
-      <a href="#contact" class="btn btn-outline">Contact Us</a>
-    </div>
-
-  </div>
-</section>
-
-<div class="container">
-  <section class="stats">
-    <div class="stat-box">
-      <h2>10+</h2>
-      <p>Learning Categories</p>
-    </div>
-
-    <div class="stat-box">
-      <h2>PDF + Video</h2>
-      <p>Learning Formats</p>
-    </div>
-
-    <div class="stat-box">
-      <h2>24/7</h2>
-      <p>Learn at Your Pace</p>
-    </div>
-  </section>
+<div class="badge">
+🌍 WORLDWIDE DIGITAL LEARNING
 </div>
 
-<section class="section" id="courses">
-  <div class="container">
+<h1>
+Learn Smarter.<br>
+<span>Build Your Future.</span>
+</h1>
 
-    <div class="section-heading">
-      <div class="badge">OUR PREMIUM COLLECTION</div>
-      <h2>Top 10 Learning Courses</h2>
-      <p>Choose a course and start building your skills.</p>
-    </div>
+<p>
+Explore original educational courses, downloadable PDFs
+and practical video lessons. Our digital learning resources
+are available for learners worldwide.
+</p>
 
-    <div class="course-grid">
+<div class="hero-buttons">
 
-      <div class="course-card">
-        <div class="course-icon">🤖</div>
-        <h3>AI & Automation Mastery</h3>
-        <p>Learn AI tools, automation concepts and practical workflows.</p>
-        <div class="course-info">
-          <span class="tag">Video + PDF</span>
-          <span class="tag">Beginner</span>
-        </div>
-        <div class="price">
-          <span class="old-price">$99</span>
-          <span class="new-price">$29</span>
-        </div>
-        <a href="#contact" class="btn">Buy Now</a>
-      </div>
+<a href="#courses" class="btn primary">
+Explore Courses
+</a>
 
-      <div class="course-card">
-        <div class="course-icon">📈</div>
-        <h3>Digital Marketing</h3>
-        <p>Understand SEO, content marketing and online promotion.</p>
-        <div class="course-info">
-          <span class="tag">PDF + Video</span>
-          <span class="tag">Marketing</span>
-        </div>
-        <div class="price">
-          <span class="old-price">$149</span>
-          <span class="new-price">$39</span>
-        </div>
-        <a href="#contact" class="btn">Buy Now</a>
-      </div>
+<a href="#contact" class="btn secondary">
+Contact Us
+</a>
 
-      <div class="course-card">
-        <div class="course-icon">💻</div>
-        <h3>Web Development</h3>
-        <p>Learn the basics of HTML, CSS and website development.</p>
-        <div class="course-info">
-          <span class="tag">Video Course</span>
-          <span class="tag">Coding</span>
-        </div>
-        <div class="price">
-          <span class="old-price">$129</span>
-          <span class="new-price">$35</span>
-        </div>
-        <a href="#contact" class="btn">Buy Now</a>
-      </div>
+</div>
 
-      <div class="course-card">
-        <div class="course-icon">💼</div>
-        <h3>Freelancing Blueprint</h3>
-        <p>Learn freelancing basics, client communication and services.</p>
-        <div class="course-info">
-          <span class="tag">PDF + Video</span>
-          <span class="tag">Career</span>
-        </div>
-        <div class="price">
-          <span class="old-price">$99</span>
-          <span class="new-price">$25</span>
-        </div>
-        <a href="#contact" class="btn">Buy Now</a>
-      </div>
+</div>
 
-      <div class="course-card">
-        <div class="course-icon">🛒</div>
-        <h3>E-commerce Starter</h3>
-        <p>Learn online store basics, product research and store setup.</p>
-        <div class="course-info">
-          <span class="tag">PDF Course</span>
-          <span class="tag">Business</span>
-        </div>
-        <div class="price">
-          <span class="old-price">$149</span>
-          <span class="new-price">$39</span>
-        </div>
-        <a href="#contact" class="btn">Buy Now</a>
-      </div>
 
-      <div class="course-card">
-        <div class="course-icon">🎨</div>
-        <h3>Graphic Design</h3>
-        <p>Explore design principles, creative tools and visual content.</p>
-        <div class="course-info">
-          <span class="tag">Video Course</span>
-          <span class="tag">Design</span>
-        </div>
-        <div class="price">
-          <span class="old-price">$119</span>
-          <span class="new-price">$29</span>
-        </div>
-        <a href="#contact" class="btn">Buy Now</a>
-      </div>
+<div class="hero-card">
 
-      <div class="course-card">
-        <div class="course-icon">🎬</div>
-        <h3>Video Editing</h3>
-        <p>Learn video editing basics, short videos and content creation.</p>
-        <div class="course-info">
-          <span class="tag">Video + PDF</span>
-          <span class="tag">Creative</span>
-        </div>
-        <div class="price">
-          <span class="old-price">$129</span>
-          <span class="new-price">$35</span>
-        </div>
-        <a href="#contact" class="btn">Buy Now</a>
-      </div>
+<div class="badge">
+MASTERYHUB COLLECTION
+</div>
 
-      <div class="course-card">
-        <div class="course-icon">🔐</div>
-        <h3>Cybersecurity Basics</h3>
-        <p>Understand online safety, account security and digital privacy.</p>
-        <div class="course-info">
-          <span class="tag">PDF Course</span>
-          <span class="tag">Technology</span>
-        </div>
-        <div class="price">
-          <span class="old-price">$99</span>
-          <span class="new-price">$29</span>
-        </div>
-        <a href="#contact" class="btn">Buy Now</a>
-      </div>
+<h2>
+Knowledge That<br>
+Turns Into Action.
+</h2>
 
-      <div class="course-card">
-        <div class="course-icon">📱</div>
-        <h3>Content Creation</h3>
-        <p>Learn content planning, short videos and audience building.</p>
-        <div class="course-info">
-          <span class="tag">Video Course</span>
-          <span class="tag">Creator</span>
-        </div>
-        <div class="price">
-          <span class="old-price">$119</span>
-          <span class="new-price">$29</span>
-        </div>
-        <a href="#contact" class="btn">Buy Now</a>
-      </div>
+<p class="muted">
+Original educational resources<br>
+Beginner-friendly learning<br>
+Worldwide customer support
+</p>
 
-      <div class="course-card">
-        <div class="course-icon">🚀</div>
-        <h3>Online Business Bundle</h3>
-        <p>A combined learning bundle for digital skills and online business.</p>
-        <div class="course-info">
-          <span class="tag">Premium Bundle</span>
-          <span class="tag">10 Topics</span>
-        </div>
-        <div class="price">
-          <span class="old-price">$299</span>
-          <span class="new-price">$79</span>
-        </div>
-        <a href="#contact" class="btn">Buy Now</a>
-      </div>
+</div>
 
-    </div>
-  </div>
 </section>
+
+
+<div class="container">
+
+<section class="stats">
+
+<div class="stat">
+<h2>10+</h2>
+<p>Learning Topics</p>
+</div>
+
+<div class="stat">
+<h2>PDF + Video</h2>
+<p>Learning Formats</p>
+</div>
+
+<div class="stat">
+<h2>Worldwide</h2>
+<p>Customer Access</p>
+</div>
+
+</section>
+
+</div>
+
+
+<section class="section" id="courses">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="badge">
+PREMIUM COURSE COLLECTION
+</div>
+
+<h2>
+Top 10 Digital Courses
+</h2>
+
+<p>
+Choose your course and send a purchase request by email.
+</p>
+
+</div>
+
+
+<div class="course-grid">
+
+
+<article class="course-card">
+
+<div class="course-cover">
+🤖 AI & AUTOMATION
+</div>
+
+<div class="course-body">
+
+<span class="tag">
+FEATURED COURSE
+</span>
+
+<h3>
+AI & Automation Mastery
+</h3>
+
+<p>
+Learn AI tools, automation concepts and practical
+digital workflows.
+</p>
+
+<ul class="course-list">
+<li>AI fundamentals</li>
+<li>Prompt engineering</li>
+<li>Automation basics</li>
+<li>Practical learning resources</li>
+</ul>
+
+<div class="price">
+<span class="old-price">$99</span>
+$29
+</div>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Course Order - AI Automation&body=Hello, I want to purchase the AI and Automation Mastery course.%0A%0ACourse Price: $29%0AMy Name:%0AMy Country:%0APlease send me payment instructions.">
+Buy Now
+</a>
+
+</div>
+</article>
+
+
+
+<article class="course-card">
+
+<div class="course-cover green">
+📈 DIGITAL MARKETING
+</div>
+
+<div class="course-body">
+
+<span class="tag">
+PDF + VIDEO
+</span>
+
+<h3>
+Digital Marketing Essentials
+</h3>
+
+<p>
+Learn SEO, content planning, customer research
+and online marketing basics.
+</p>
+
+<ul class="course-list">
+<li>Marketing foundations</li>
+<li>SEO basics</li>
+<li>Content strategy</li>
+<li>Marketing checklists</li>
+</ul>
+
+<div class="price">
+<span class="old-price">$149</span>
+$39
+</div>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Course Order - Digital Marketing&body=Hello, I want to purchase the Digital Marketing course.%0A%0ACourse Price: $39%0AMy Name:%0AMy Country:%0APlease send me payment instructions.">
+Buy Now
+</a>
+
+</div>
+</article>
+
+
+
+<article class="course-card">
+
+<div class="course-cover">
+💻 WEB DEVELOPMENT
+</div>
+
+<div class="course-body">
+
+<span class="tag">
+VIDEO COURSE
+</span>
+
+<h3>
+Web Development Basics
+</h3>
+
+<p>
+Learn HTML, CSS and the basic process of
+creating websites.
+</p>
+
+<ul class="course-list">
+<li>HTML fundamentals</li>
+<li>CSS basics</li>
+<li>Website structure</li>
+<li>Beginner projects</li>
+</ul>
+
+<div class="price">
+<span class="old-price">$129</span>
+$35
+</div>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Course Order - Web Development&body=Hello, I want to purchase the Web Development course.%0A%0ACourse Price: $35%0AMy Name:%0AMy Country:%0APlease send me payment instructions.">
+Buy Now
+</a>
+
+</div>
+</article>
+
+
+
+<article class="course-card">
+
+<div class="course-cover orange">
+💼 FREELANCING
+</div>
+
+<div class="course-body">
+
+<span class="tag">
+PDF + VIDEO
+</span>
+
+<h3>
+Freelancing Blueprint
+</h3>
+
+<p>
+Learn freelancing basics, client communication
+and service planning.
+</p>
+
+<ul class="course-list">
+<li>Freelancing basics</li>
+<li>Client communication</li>
+<li>Service ideas</li>
+<li>Profile preparation</li>
+</ul>
+
+<div class="price">
+<span class="old-price">$99</span>
+$25
+</div>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Course Order - Freelancing&body=Hello, I want to purchase the Freelancing Blueprint course.%0A%0ACourse Price: $25%0AMy Name:%0AMy Country:%0APlease send me payment instructions.">
+Buy Now
+</a>
+
+</div>
+</article>
+
+
+
+<article class="course-card">
+
+<div class="course-cover green">
+🛒 E-COMMERCE
+</div>
+
+<div class="course-body">
+
+<span class="tag">
+PDF COURSE
+</span>
+
+<h3>
+E-commerce Starter
+</h3>
+
+<p>
+Learn online store basics, product research
+and business planning.
+</p>
+
+<ul class="course-list">
+<li>Store fundamentals</li>
+<li>Product research</li>
+<li>Customer basics</li>
+<li>Launch planning</li>
+</ul>
+
+<div class="price">
+<span class="old-price">$149</span>
+$39
+</div>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Course Order - Ecommerce&body=Hello, I want to purchase the E-commerce Starter course.%0A%0ACourse Price: $39%0AMy Name:%0AMy Country:%0APlease send me payment instructions.">
+Buy Now
+</a>
+
+</div>
+</article>
+
+
+
+<article class="course-card">
+
+<div class="course-cover">
+🎨 GRAPHIC DESIGN
+</div>
+
+<div class="course-body">
+
+<span class="tag">
+VIDEO COURSE
+</span>
+
+<h3>
+Graphic Design Basics
+</h3>
+
+<p>
+Explore design principles, creative tools
+and visual content.
+</p>
+
+<ul class="course-list">
+<li>Design principles</li>
+<li>Creative workflow</li>
+<li>Visual content</li>
+<li>Beginner projects</li>
+</ul>
+
+<div class="price">
+<span class="old-price">$119</span>
+$29
+</div>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Course Order - Graphic Design&body=Hello, I want to purchase the Graphic Design course.%0A%0ACourse Price: $29%0AMy Name:%0AMy Country:%0APlease send me payment instructions.">
+Buy Now
+</a>
+
+</div>
+</article>
+
+
+
+<article class="course-card">
+
+<div class="course-cover orange">
+🎬 VIDEO EDITING
+</div>
+
+<div class="course-body">
+
+<span class="tag">
+PDF + VIDEO
+</span>
+
+<h3>
+Video Editing Mastery
+</h3>
+
+<p>
+Learn video editing basics, short videos
+and content creation.
+</p>
+
+<ul class="course-list">
+<li>Editing fundamentals</li>
+<li>Short video creation</li>
+<li>Content planning</li>
+<li>Practical exercises</li>
+</ul>
+
+<div class="price">
+<span class="old-price">$129</span>
+$35
+</div>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Course Order - Video Editing&body=Hello, I want to purchase the Video Editing course.%0A%0ACourse Price: $35%0AMy Name:%0AMy Country:%0APlease send me payment instructions.">
+Buy Now
+</a>
+
+</div>
+</article>
+
+
+
+<article class="course-card">
+
+<div class="course-cover">
+🔐 CYBERSECURITY
+</div>
+
+<div class="course-body">
+
+<span class="tag">
+PDF COURSE
+</span>
+
+<h3>
+Cybersecurity Basics
+</h3>
+
+<p>
+Understand online safety, account security
+and digital privacy.
+</p>
+
+<ul class="course-list">
+<li>Online safety</li>
+<li>Account protection</li>
+<li>Privacy basics</li>
+<li>Security checklists</li>
+</ul>
+
+<div class="price">
+<span class="old-price">$99</span>
+$29
+</div>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Course Order - Cybersecurity&body=Hello, I want to purchase the Cybersecurity Basics course.%0A%0ACourse Price: $29%0AMy Name:%0AMy Country:%0APlease send me payment instructions.">
+Buy Now
+</a>
+
+</div>
+</article>
+
+
+
+<article class="course-card">
+
+<div class="course-cover green">
+📱 CONTENT CREATION
+</div>
+
+<div class="course-body">
+
+<span class="tag">
+VIDEO COURSE
+</span>
+
+<h3>
+Content Creation
+</h3>
+
+<p>
+Learn content planning, short videos
+and audience-building basics.
+</p>
+
+<ul class="course-list">
+<li>Content ideas</li>
+<li>Video planning</li>
+<li>Audience basics</li>
+<li>Publishing workflow</li>
+</ul>
+
+<div class="price">
+<span class="old-price">$119</span>
+$29
+</div>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Course Order - Content Creation&body=Hello, I want to purchase the Content Creation course.%0A%0ACourse Price: $29%0AMy Name:%0AMy Country:%0APlease send me payment instructions.">
+Buy Now
+</a>
+
+</div>
+</article>
+
+
+
+<article class="course-card">
+
+<div class="course-cover orange">
+🚀 BUSINESS BUNDLE
+</div>
+
+<div class="course-body">
+
+<span class="tag">
+PREMIUM BUNDLE
+</span>
+
+<h3>
+Online Business Bundle
+</h3>
+
+<p>
+A combined learning bundle for digital skills
+and online business.
+</p>
+
+<ul class="course-list">
+<li>Business fundamentals</li>
+<li>Digital products</li>
+<li>Marketing basics</li>
+<li>Online business planning</li>
+</ul>
+
+<div class="price">
+<span class="old-price">$299</span>
+$79
+</div>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Course Order - Online Business Bundle&body=Hello, I want to purchase the Online Business Bundle.%0A%0ACourse Price: $79%0AMy Name:%0AMy Country:%0APlease send me payment instructions.">
+Buy Now
+</a>
+
+</div>
+</article>
+
+
+</div>
+
+<p class="note">
+Note: Prices are sample prices. Replace them with your actual course prices.
+Only sell original content or content you are authorized to sell.
+</p>
+
+</div>
+</section>
+
+
+
+<section class="section" id="how">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="badge">
+SIMPLE PROCESS
+</div>
+
+<h2>
+How Buying Works
+</h2>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+<strong>01</strong>
+<h3>Choose a Course</h3>
+<p>
+Select the course you want to purchase.
+</p>
+</div>
+
+<div class="step">
+<strong>02</strong>
+<h3>Send an Order</h3>
+<p>
+Click Buy Now and send your course request by email.
+</p>
+</div>
+
+<div class="step">
+<strong>03</strong>
+<h3>Receive Access</h3>
+<p>
+After payment verification, the course delivery details
+will be sent to the customer.
+</p>
+</div>
+
+</div>
+
+<p class="note">
+Important: This static GitHub Pages website does not automatically
+verify payments or protect private PDF files.
+</p>
+
+</div>
+</section>
+
+
 
 <section class="section" id="features">
-  <div class="container">
 
-    <div class="section-heading">
-      <div class="badge">WHY MASTERYHUB</div>
-      <h2>Learn With Confidence</h2>
-      <p>Designed for practical digital learning.</p>
-    </div>
+<div class="container">
 
-    <div class="features">
+<div class="section-heading">
 
-      <div class="feature">
-        <div class="feature-icon">📚</div>
-        <h3>Practical Learning</h3>
-        <p>Learn useful concepts through structured educational content.</p>
-      </div>
+<div class="badge">
+WHY MASTERYHUB
+</div>
 
-      <div class="feature">
-        <div class="feature-icon">🎥</div>
-        <h3>Video & PDF</h3>
-        <p>Access your learning materials in convenient formats.</p>
-      </div>
+<h2>
+Learn With Confidence
+</h2>
 
-      <div class="feature">
-        <div class="feature-icon">🌎</div>
-        <h3>Learn Anywhere</h3>
-        <p>Study at your own pace using your phone or computer.</p>
-      </div>
+<p>
+Designed for practical digital learning.
+</p>
 
-    </div>
-  </div>
+</div>
+
+<div class="features">
+
+<div class="feature">
+<h3>📚 Practical Learning</h3>
+<p>
+Structured educational content for useful digital skills.
+</p>
+</div>
+
+<div class="feature">
+<h3>🎥 PDF & Video</h3>
+<p>
+Learning materials in convenient digital formats.
+</p>
+</div>
+
+<div class="feature">
+<h3>🌎 Worldwide Access</h3>
+<p>
+Customers from different countries can contact you.
+</p>
+</div>
+
+</div>
+
+</div>
 </section>
+
+
 
 <section class="section">
-  <div class="container">
-    <div class="cta">
-      <h2>Ready to Learn Something New?</h2>
-      <p>
-        Explore our digital learning collection and contact us
-        to learn about course access and purchasing.
-      </p>
-      <a href="#contact" class="btn">Get Started</a>
-    </div>
-  </div>
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+Ready to Learn Something New?
+</h2>
+
+<p>
+Explore our digital learning collection and contact us
+for course details, payment instructions and access information.
+</p>
+
+<a href="#contact" class="btn primary">
+Get Started
+</a>
+
+</div>
+
+</div>
 </section>
 
+
+
 <section class="section" id="contact">
-  <div class="container">
 
-    <div class="section-heading">
-      <div class="badge">CONTACT US</div>
-      <h2>Get Your Course</h2>
-      <p>Contact us for course details, payment and access information.</p>
-    </div>
+<div class="container">
 
-    <div class="contact-box">
-      <h3>Interested in a Course?</h3>
+<div class="section-heading">
 
-      <p>
-        Send us the course name you want to purchase.
-        We will share the available details and order process.
-      </p>
+<div class="badge">
+CONTACT MASTERYHUB
+</div>
 
-      <!-- Replace this email with your real business email -->
-      
-        <a
-  class="btn"
-  href="mailto:shahzadshoukat743@gmail.com?subject=Course Purchase Inquiry"
->
-  Email Us
+<h2>
+Worldwide Course Orders
+</h2>
+
+<p>
+Send your course request by email.
+</p>
+
+</div>
+
+<div class="contact">
+
+<h2>
+Interested in a Course?
+</h2>
+
+<p>
+Tell us your course name, country and preferred payment method.
+We will reply with the next order instructions.
+</p>
+
+<a class="btn primary"
+href="mailto:shahzadshoukat743@gmail.com?subject=Worldwide Course Order&body=Hello, I want to purchase a course from MasteryHub.%0A%0ACourse Name:%0AMy Name:%0AMy Country:%0APreferred Payment Method:%0APlease send me payment instructions.">
+Email Us
 </a>
-    </div>
 
-  </div>
+<p class="note">
+Email: shahzadshoukat743@gmail.com
+</p>
+
+</div>
+
+</div>
 </section>
 
 </main>
 
+
+
 <footer>
-  <div class="container">
-    <p>© 2026 MasteryHub. All rights reserved.</p>
-    <p>Original educational content and learning resources.</p>
-  </div>
+
+<p>
+© 2026 MasteryHub. All rights reserved.
+</p>
+
+<p>
+Original educational content • Worldwide Digital Learning
+</p>
+
 </footer>
 
 </body>
