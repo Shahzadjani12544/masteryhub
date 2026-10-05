@@ -3,652 +3,684 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MasteryHub - Original digital courses and learning resources worldwide.">
-<title>MasteryHub | Learn Skills. Build Your Future.</title>
+
+<title>MasteryHub | Online Courses</title>
 
 <style>
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
   background:#07111f;
-  color:#eef4ff;
+  color:#fff;
   line-height:1.6;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-.container{
-  width:min(1120px,92%);
-  margin:auto;
-}
-
-/* NAVBAR */
 nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 7%;
+  background:#0b1728;
   position:sticky;
   top:0;
-  z-index:20;
-  background:rgba(7,17,31,.96);
-  border-bottom:1px solid #20334d;
-}
-
-.navin{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  min-height:68px;
+  z-index:1000;
+  border-bottom:1px solid #1d3048;
 }
 
 .logo{
   font-size:25px;
-  font-weight:800;
+  font-weight:bold;
+  color:#4da3ff;
 }
 
-.logo span{
-  color:#53d8ff;
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:22px;
+  font-size:15px;
 }
 
-.navlinks{
-  display:flex;
-  gap:22px;
-  color:#c9d5e7;
-  font-size:14px;
+nav a:hover{
+  color:#4da3ff;
 }
 
-.navlinks a:hover{
-  color:#53d8ff;
+.hero{
+  padding:90px 7%;
+  text-align:center;
+  background:linear-gradient(135deg,#07111f,#102d4d);
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:18px;
+}
+
+.hero h1 span{
+  color:#4da3ff;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  color:#c7d4e5;
+  font-size:18px;
 }
 
 .btn{
   display:inline-block;
-  padding:12px 20px;
-  border-radius:10px;
-  font-weight:700;
-  border:1px solid #2c8fb3;
-  background:#53d8ff;
-  color:#03111b;
-  cursor:pointer;
+  margin-top:28px;
+  padding:14px 25px;
+  border-radius:8px;
+  background:#4da3ff;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 .btn:hover{
-  filter:brightness(1.08);
+  background:#2f88df;
 }
 
-/* HERO */
-.hero{
-  padding:88px 0 75px;
-  background:
-  radial-gradient(circle at 75% 25%,#123b5c 0,transparent 38%),
-  linear-gradient(135deg,#07111f,#0a1729);
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:45px;
-  align-items:center;
-}
-
-.badge{
-  display:inline-block;
-  padding:7px 12px;
-  border:1px solid #285879;
-  border-radius:999px;
-  color:#7de4ff;
-  background:#0b2234;
-  font-size:13px;
-  font-weight:700;
-  margin-bottom:20px;
-}
-
-h1{
-  font-size:clamp(40px,6vw,70px);
-  line-height:1.05;
-  margin-bottom:22px;
-}
-
-h1 span{
-  color:#53d8ff;
-}
-
-.hero p{
-  font-size:18px;
-  color:#b9c7d9;
-  max-width:680px;
-  margin-bottom:28px;
-}
-
-.actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.btn-alt{
-  background:transparent;
-  color:#eef4ff;
-  border-color:#38516f;
-}
-
-.hero-card{
-  background:linear-gradient(145deg,#102238,#0b1829);
-  border:1px solid #29415e;
-  border-radius:22px;
-  padding:30px;
-}
-
-.hero-card h3{
-  font-size:22px;
-  margin-bottom:18px;
-}
-
-.stat{
-  display:flex;
-  justify-content:space-between;
-  border-bottom:1px solid #243a55;
-  padding:14px 0;
-  color:#c9d5e7;
-}
-
-.stat:last-child{
-  border-bottom:0;
-}
-
-/* SECTIONS */
 section{
-  padding:75px 0;
+  padding:65px 7%;
 }
 
 .section-title{
   text-align:center;
   font-size:34px;
-  margin-bottom:12px;
+  margin-bottom:40px;
 }
 
-.section-sub{
-  text-align:center;
-  color:#9fb0c6;
-  max-width:720px;
-  margin:0 auto 38px;
-}
-
-/* COURSES */
-.grid{
+.courses{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
 }
 
 .card{
-  background:#0c1a2c;
-  border:1px solid #213952;
-  border-radius:17px;
-  padding:25px;
-  display:flex;
-  flex-direction:column;
+  background:#0d1c30;
+  border:1px solid #203650;
+  border-radius:14px;
+  padding:28px;
+  transition:.3s;
 }
 
 .card:hover{
-  border-color:#34799b;
-  transform:translateY(-3px);
-}
-
-.icon{
-  font-size:30px;
-  margin-bottom:14px;
+  transform:translateY(-5px);
+  border-color:#4da3ff;
 }
 
 .card h3{
-  font-size:21px;
-  margin-bottom:8px;
+  color:#4da3ff;
+  font-size:23px;
+  margin-bottom:10px;
 }
 
 .card p{
-  color:#aebdd0;
-  font-size:14px;
-  margin-bottom:18px;
-  flex:1;
+  color:#c7d4e5;
+  margin-bottom:12px;
 }
 
 .price{
-  font-size:25px;
-  font-weight:800;
-  margin:10px 0 18px;
+  font-size:28px;
+  font-weight:bold;
+  margin:15px 0;
 }
 
-.price small{
-  font-size:13px;
-  color:#91a4ba;
-  font-weight:400;
-}
-
-.feature{
-  border-color:#3b87a8;
-}
-
-.tag{
+.badge{
   display:inline-block;
-  font-size:11px;
-  padding:5px 8px;
-  border-radius:6px;
-  background:#12394c;
-  color:#72e0ff;
-  margin-bottom:12px;
-  width:max-content;
+  background:#173b5f;
+  color:#fff;
+  padding:7px 12px;
+  border-radius:20px;
+  font-size:13px;
+  margin:4px 3px;
 }
 
-/* HOW IT WORKS */
+.card ul{
+  padding-left:20px;
+  color:#d9e3ef;
+}
+
+.card li{
+  margin:6px 0;
+}
+
+.info{
+  background:#0b1728;
+  border-radius:15px;
+  padding:35px;
+  max-width:900px;
+  margin:auto;
+}
+
+.info h3{
+  color:#4da3ff;
+  margin-bottom:12px;
+}
+
+.info p{
+  color:#c7d4e5;
+  margin-bottom:18px;
+}
+
 .steps{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
 }
 
 .step{
-  padding:22px;
-  background:#0c1a2c;
-  border:1px solid #213952;
-  border-radius:15px;
+  background:#0d1c30;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #203650;
+  text-align:center;
 }
 
-.num{
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:#53d8ff;
-  color:#03111b;
-  font-weight:800;
-  margin-bottom:13px;
+.step strong{
+  display:block;
+  color:#4da3ff;
+  font-size:20px;
+  margin-bottom:8px;
 }
 
-/* FAQ */
 .faq{
   max-width:850px;
   margin:auto;
 }
 
-details{
-  background:#0c1a2c;
-  border:1px solid #213952;
-  border-radius:12px;
-  margin:10px 0;
-  padding:17px 20px;
+.faq-item{
+  background:#0d1c30;
+  padding:22px;
+  margin-bottom:15px;
+  border-radius:10px;
+  border:1px solid #203650;
 }
 
-summary{
-  cursor:pointer;
-  font-weight:700;
+.faq-item h3{
+  color:#4da3ff;
+  margin-bottom:8px;
 }
 
-details p{
-  color:#aebdd0;
-  margin-top:12px;
-}
-
-/* CTA */
-.cta{
-  background:linear-gradient(135deg,#0c3043,#10223a);
-  border:1px solid #2d6079;
-  border-radius:22px;
-  padding:45px;
-  text-align:center;
-}
-
-.cta p{
-  color:#b8c9db;
-  margin:10px auto 22px;
-  max-width:650px;
-}
-
-/* FOOTER */
 footer{
-  border-top:1px solid #20334d;
-  padding:35px 0;
-  color:#91a4ba;
-  font-size:13px;
+  text-align:center;
+  padding:30px 7%;
+  background:#050c16;
+  color:#8fa4ba;
 }
 
-.footerin{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
+.email{
+  color:#4da3ff;
+  font-weight:bold;
 }
 
-/* MOBILE */
-@media(max-width:850px){
-
-  .hero-grid,
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .steps{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .navlinks{
-    display:none;
-  }
+.notice{
+  background:#102d4d;
+  border-left:4px solid #4da3ff;
+  padding:18px;
+  margin:20px 0;
+  border-radius:8px;
+  color:#dcecff;
 }
 
-@media(max-width:520px){
+@media(max-width:700px){
 
-  .steps{
-    grid-template-columns:1fr;
+  nav{
+    flex-direction:column;
+    gap:12px;
   }
 
-  h1{
-    font-size:43px;
+  nav a{
+    margin:0 7px;
   }
 
-  .cta{
-    padding:30px 20px;
+  .hero h1{
+    font-size:36px;
   }
+
+  section{
+    padding:50px 5%;
+  }
+
 }
 </style>
 </head>
 
 <body>
 
+
 <!-- NAVIGATION -->
 <nav>
-<div class="container navin">
 
-<a class="logo" href="#home">
-Mastery<span>Hub</span>
-</a>
+  <div class="logo">MasteryHub</div>
 
-<div class="navlinks">
-<a href="#courses">Courses</a>
-<a href="#how">How It Works</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-</div>
+  <div>
+    <a href="#courses">Courses</a>
+    <a href="#how">How It Works</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-<a class="btn" href="#courses">
-Explore Courses
-</a>
-
-</div>
 </nav>
 
 
 <!-- HERO -->
-<header class="hero" id="home">
+<section class="hero">
 
-<div class="container hero-grid">
+  <h1>
+    Learn Skills.
+    <span>Build Your Future.</span>
+  </h1>
 
-<div>
+  <p>
+    MasteryHub provides original digital courses designed to help
+    learners build valuable knowledge and practical skills from
+    anywhere in the world.
+  </p>
 
-<div class="badge">
-🌍 WORLDWIDE DIGITAL LEARNING
-</div>
+  <a href="#courses" class="btn">
+    Explore Courses
+  </a>
 
-<h1>
-Learn Skills.<br>
-<span>Build Your Future.</span>
-</h1>
-
-<p>
-MasteryHub provides original, beginner-friendly digital courses and learning books designed to help you build practical knowledge in modern, high-value fields.
-</p>
-
-<div class="actions">
-
-<a class="btn" href="#courses">
-Browse Courses
-</a>
-
-<a class="btn btn-alt" href="#how">
-How It Works
-</a>
-
-</div>
-
-</div>
-
-
-<div class="hero-card">
-
-<h3>Why MasteryHub?</h3>
-
-<div class="stat">
-<span>📚 Original Learning Content</span>
-<b>✓</b>
-</div>
-
-<div class="stat">
-<span>🌎 Worldwide Access</span>
-<b>✓</b>
-</div>
-
-<div class="stat">
-<span>💻 Digital Delivery</span>
-<b>✓</b>
-</div>
-
-<div class="stat">
-<span>🎯 Beginner Friendly</span>
-<b>✓</b>
-</div>
-
-</div>
-
-</div>
-
-</header>
+</section>
 
 
 <!-- COURSES -->
 <section id="courses">
 
-<div class="container">
+  <h2 class="section-title">
+    Featured Courses
+  </h2>
 
-<h2 class="section-title">
-Featured Courses
-</h2>
+  <div class="courses">
 
-<p class="section-sub">
-Choose a subject and start building your knowledge with structured digital learning resources.
-</p>
 
+    <!-- COURSE 1 -->
+    <div class="card">
 
-<div class="grid">
+      <h3>
+        Medicine & Medical Sciences
+      </h3>
 
+      <p>
+        Complete Foundation Course for learning the fundamentals
+        of medical and health sciences.
+      </p>
 
-<!-- MEDICINE -->
-<article class="card feature">
+      <div>
+        <span class="badge">📚 500+ Pages PDF</span>
+        <span class="badge">🎥 Complete Video Course</span>
+      </div>
 
-<span class="tag">
-FEATURED
-</span>
+      <div class="price">
+        $49
+      </div>
 
-<div class="icon">
-🩺
-</div>
+      <ul>
 
-<h3>
-Medicine & Medical Sciences
-</h3>
+        <li>500+ Pages Course Book</li>
 
-<p>
-A foundation-level educational course covering anatomy, physiology, pathology, pharmacology, diagnostics, public health and clinical reasoning.
-</p>
+        <li>Complete Video Course</li>
 
-<div class="price">
-$49 <small>digital course</small>
-</div>
+        <li>Human Anatomy & Physiology</li>
 
-<a class="btn"
-href="mailto:shahzadshoukat743@gmail.com?subject=MasteryHub%20Medicine%20Course%20Order&body=Hello%20MasteryHub,%0A%0AI%20want%20to%20order%20the%20Medicine%20%26%20Medical%20Sciences%20course.%0A%0AName:%0ACountry:%0A">
+        <li>Cell Biology & Genetics</li>
 
-Buy Now
+        <li>Tissues & Basic Histology</li>
 
-</a>
+        <li>Musculoskeletal System</li>
 
-</article>
+        <li>Nervous System</li>
 
+        <li>Cardiovascular System</li>
 
-<!-- AI -->
-<article class="card">
+        <li>Respiratory System</li>
 
-<div class="icon">
-🤖
-</div>
+        <li>Digestive System</li>
 
-<h3>
-AI & Automation
-</h3>
+        <li>Renal & Urinary System</li>
 
-<p>
-Learn AI fundamentals, prompting, automation concepts, workflows and practical ways to use modern AI tools.
-</p>
+        <li>Endocrine System</li>
 
-<div class="price">
-$49 <small>digital course</small>
-</div>
+        <li>Reproductive System</li>
 
-<a class="btn"
-href="mailto:shahzadshoukat743@gmail.com?subject=MasteryHub%20AI%20%26%20Automation%20Order&body=Hello%20MasteryHub,%0A%0AI%20want%20to%20order%20the%20AI%20%26%20Automation%20course.%0A%0AName:%0ACountry:%0A">
+        <li>Immune System & Microbiology</li>
 
-Buy Now
+        <li>Pathology Foundations</li>
 
-</a>
+        <li>Pharmacology Foundations</li>
 
-</article>
+        <li>Diagnostics & Laboratory Medicine</li>
 
+        <li>Public Health & Epidemiology</li>
 
-<!-- DIGITAL MARKETING -->
-<article class="card">
+        <li>Medical Ethics</li>
 
-<div class="icon">
-📈
-</div>
+        <li>Clinical Reasoning Basics</li>
 
-<h3>
-Digital Marketing
-</h3>
+        <li>MCQs & Final Assessment</li>
 
-<p>
-Build a foundation in content, social media, SEO, marketing strategy, customer research and online promotion.
-</p>
+      </ul>
 
-<div class="price">
-$39 <small>digital course</small>
-</div>
+      <a
+        class="btn"
+        href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20Medicine%20%26%20Medical%20Sciences%20Course&body=Hello%20MasteryHub,%0A%0AI%20want%20to%20purchase%20the%20Medicine%20%26%20Medical%20Sciences%20Complete%20Foundation%20Course.%0A%0AThe%20course%20includes%20500%2B%20Pages%20PDF%20%2B%20Complete%20Video%20Course.%0A%0APlease%20send%20me%20the%20payment%20instructions.%0A%0AThank%20you."
+      >
+        Buy Now
+      </a>
 
-<a class="btn"
-href="mailto:shahzadshoukat743@gmail.com?subject=MasteryHub%20Digital%20Marketing%20Order&body=Hello%20MasteryHub,%0A%0AI%20want%20to%20order%20the%20Digital%20Marketing%20course.%0A%0AName:%0ACountry:%0A">
+    </div>
 
-Buy Now
 
-</a>
+    <!-- COURSE 2 -->
+    <div class="card">
 
-</article>
+      <h3>
+        AI & Automation
+      </h3>
 
+      <p>
+        Learn AI concepts, automation tools and practical workflows
+        from beginner level.
+      </p>
 
-<!-- BUSINESS -->
-<article class="card">
+      <div>
+        <span class="badge">📚 Course PDF</span>
+        <span class="badge">🎥 Video Course</span>
+      </div>
 
-<div class="icon">
-💼
-</div>
+      <div class="price">
+        $49
+      </div>
 
-<h3>
-Business & Entrepreneurship
-</h3>
+      <ul>
 
-<p>
-Learn business fundamentals, idea validation, customers, offers, basic finance, operations and growth thinking.
-</p>
+        <li>AI Fundamentals</li>
 
-<div class="price">
-$49 <small>digital course</small>
-</div>
+        <li>Automation Basics</li>
 
-<a class="btn"
-href="mailto:shahzadshoukat743@gmail.com?subject=MasteryHub%20Business%20Course%20Order&body=Hello%20MasteryHub,%0A%0AI%20want%20to%20order%20the%20Business%20%26%20Entrepreneurship%20course.%0A%0AName:%0ACountry:%0A">
+        <li>AI Tools</li>
 
-Buy Now
+        <li>Prompt Engineering</li>
 
-</a>
+        <li>Practical Projects</li>
 
-</article>
+      </ul>
 
+      <a
+        class="btn"
+        href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20AI%20%26%20Automation%20Course"
+      >
+        Buy Now
+      </a>
 
-<!-- FREELANCING -->
-<article class="card">
+    </div>
 
-<div class="icon">
-💻
-</div>
 
-<h3>
-Freelancing Blueprint
-</h3>
+    <!-- COURSE 3 -->
+    <div class="card">
 
-<p>
-A practical beginner roadmap covering skills, profiles, offers, proposals, client communication and basic workflow.
-</p>
+      <h3>
+        Digital Marketing
+      </h3>
 
-<div class="price">
-$39 <small>digital course</small>
-</div>
+      <p>
+        Build a strong foundation in modern digital marketing
+        and online promotion.
+      </p>
 
-<a class="btn"
-href="mailto:shahzadshoukat743@gmail.com?subject=MasteryHub%20Freelancing%20Course%20Order&body=Hello%20MasteryHub,%0A%0AI%20want%20to%20order%20the%20Freelancing%20Blueprint%20course.%0A%0AName:%0ACountry:%0A">
+      <div>
+        <span class="badge">📚 Course PDF</span>
+        <span class="badge">🎥 Video Course</span>
+      </div>
 
-Buy Now
+      <div class="price">
+        $39
+      </div>
 
-</a>
+      <ul>
 
-</article>
+        <li>Digital Marketing Basics</li>
 
+        <li>Social Media Marketing</li>
 
-<!-- FILM -->
-<article class="card">
+        <li>Content Strategy</li>
 
-<div class="icon">
-🎬
-</div>
+        <li>SEO Fundamentals</li>
 
-<h3>
-Film & Content Creation
-</h3>
+        <li>Marketing Projects</li>
 
-<p>
-Explore storytelling, scripting, visual planning, production basics, editing concepts and digital content strategy.
-</p>
+      </ul>
 
-<div class="price">
-$39 <small>digital course</small>
-</div>
+      <a
+        class="btn"
+        href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20Digital%20Marketing%20Course"
+      >
+        Buy Now
+      </a>
 
-<a class="btn"
-href="mailto:shahzadshoukat743@gmail.com?subject=MasteryHub%20Film%20%26%20Content%20Course%20Order&body=Hello%20MasteryHub,%0A%0AI%20want%20to%20order%20the%20Film%20%26%20Content%20Creation%20course.%0A%0AName:%0ACountry:%0A">
+    </div>
 
-Buy Now
 
-</a>
+    <!-- COURSE 4 -->
+    <div class="card">
 
-</article>
+      <h3>
+        Business & Entrepreneurship
+      </h3>
 
-</div>
-</div>
+      <p>
+        Learn business fundamentals, entrepreneurship and
+        practical business planning.
+      </p>
+
+      <div>
+        <span class="badge">📚 Course PDF</span>
+        <span class="badge">🎥 Video Course</span>
+      </div>
+
+      <div class="price">
+        $49
+      </div>
+
+      <ul>
+
+        <li>Business Fundamentals</li>
+
+        <li>Entrepreneurship</li>
+
+        <li>Business Models</li>
+
+        <li>Marketing Basics</li>
+
+        <li>Business Planning</li>
+
+      </ul>
+
+      <a
+        class="btn"
+        href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20Business%20%26%20Entrepreneurship%20Course"
+      >
+        Buy Now
+      </a>
+
+    </div>
+
+
+    <!-- COURSE 5 -->
+    <div class="card">
+
+      <h3>
+        Freelancing Blueprint
+      </h3>
+
+      <p>
+        Learn the fundamentals of freelancing, client communication
+        and online services.
+      </p>
+
+      <div>
+        <span class="badge">📚 Course PDF</span>
+        <span class="badge">🎥 Video Course</span>
+      </div>
+
+      <div class="price">
+        $39
+      </div>
+
+      <ul>
+
+        <li>Freelancing Basics</li>
+
+        <li>Service Selection</li>
+
+        <li>Client Communication</li>
+
+        <li>Portfolio Basics</li>
+
+        <li>Online Work Strategy</li>
+
+      </ul>
+
+      <a
+        class="btn"
+        href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20Freelancing%20Blueprint"
+      >
+        Buy Now
+      </a>
+
+    </div>
+
+
+    <!-- COURSE 6 -->
+    <div class="card">
+
+      <h3>
+        Film & Content Creation
+      </h3>
+
+      <p>
+        Learn storytelling, content planning and the foundations
+        of modern digital video creation.
+      </p>
+
+      <div>
+        <span class="badge">📚 Course PDF</span>
+        <span class="badge">🎥 Video Course</span>
+      </div>
+
+      <div class="price">
+        $39
+      </div>
+
+      <ul>
+
+        <li>Storytelling</li>
+
+        <li>Video Planning</li>
+
+        <li>Content Creation</li>
+
+        <li>Short-Form Videos</li>
+
+        <li>Creative Projects</li>
+
+      </ul>
+
+      <a
+        class="btn"
+        href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20Film%20%26%20Content%20Creation%20Course"
+      >
+        Buy Now
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MEDICINE COURSE DETAILS -->
+<section>
+
+  <h2 class="section-title">
+    Medicine & Medical Sciences
+  </h2>
+
+  <div class="info">
+
+    <h3>
+      Complete Course Package
+    </h3>
+
+    <div class="notice">
+
+      📚 <strong>500+ Pages PDF Course Book</strong><br>
+
+      🎥 <strong>Complete Video Course</strong><br>
+
+      📝 <strong>MCQs & Final Assessment</strong>
+
+    </div>
+
+
+    <h3>
+      What You Will Learn
+    </h3>
+
+    <p>
+      This original educational course introduces learners to
+      the foundations of medical sciences through structured lessons,
+      explanations, revision material, MCQs and assessments.
+    </p>
+
+
+    <h3>
+      Course Roadmap
+    </h3>
+
+    <p>
+      Foundations of Medical Sciences → Human Body Organization →
+      Cell Biology & Genetics → Tissues → Musculoskeletal System →
+      Nervous System → Cardiovascular System → Respiratory System →
+      Digestive System → Renal System → Endocrine System →
+      Reproductive System → Immune System & Microbiology →
+      Pathology → Pharmacology → Diagnostics → Public Health →
+      Medical Ethics → Clinical Reasoning → Final Assessment.
+    </p>
+
+
+    <h3>
+      What You Receive
+    </h3>
+
+    <p>
+      After successful payment verification, the customer receives
+      access to the course materials according to the delivery
+      method provided by MasteryHub.
+    </p>
+
+
+    <h3>
+      Important Notice
+    </h3>
+
+    <p>
+      This is an independent educational foundation course.
+      It is not an official medical degree, university qualification,
+      medical license or clinical training program. Clinical decisions
+      require qualified professional supervision and current
+      authoritative medical sources.
+    </p>
+
+  </div>
 
 </section>
 
@@ -656,79 +688,94 @@ Buy Now
 <!-- HOW IT WORKS -->
 <section id="how">
 
-<div class="container">
+  <h2 class="section-title">
+    How It Works
+  </h2>
 
-<h2 class="section-title">
-How It Works
-</h2>
+  <div class="steps">
 
-<p class="section-sub">
-A simple manual-order process for digital courses.
-</p>
+    <div class="step">
+
+      <strong>
+        1. Choose
+      </strong>
+
+      Select the course you want.
+
+    </div>
 
 
-<div class="steps">
+    <div class="step">
 
-<div class="step">
-<div class="num">1</div>
-<h3>Choose</h3>
-<p>
-Select the course you want.
-</p>
-</div>
+      <strong>
+        2. Order
+      </strong>
 
-<div class="step">
-<div class="num">2</div>
-<h3>Order</h3>
-<p>
-Click Buy Now and send your order details by email.
-</p>
-</div>
+      Click the Buy Now button.
 
-<div class="step">
-<div class="num">3</div>
-<h3>Payment</h3>
-<p>
-We provide the current manual payment instructions. Never send passwords, OTPs or private keys.
-</p>
-</div>
+    </div>
 
-<div class="step">
-<div class="num">4</div>
-<h3>Delivery</h3>
-<p>
-After payment verification, your digital course is delivered.
-</p>
-</div>
 
-</div>
-</div>
+    <div class="step">
+
+      <strong>
+        3. Payment
+      </strong>
+
+      Receive the available manual payment instructions.
+
+    </div>
+
+
+    <div class="step">
+
+      <strong>
+        4. Delivery
+      </strong>
+
+      After payment verification, your course is delivered.
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- CTA -->
+<!-- PAYMENT -->
 <section>
 
-<div class="container">
+  <h2 class="section-title">
+    Manual Payment
+  </h2>
 
-<div class="cta">
+  <div class="info">
 
-<h2>
-Ready to Start Learning?
-</h2>
+    <h3>
+      Simple & Secure Ordering
+    </h3>
 
-<p>
-Explore the available courses and choose the skill or subject you want to study.
-</p>
+    <p>
+      After placing your order, MasteryHub will provide the
+      available manual payment instructions by email.
+    </p>
 
-<a class="btn" href="#courses">
-Explore Courses
-</a>
+    <p>
+      After payment, send your payment confirmation or transaction
+      ID through email. Payment will be independently verified
+      before course delivery.
+    </p>
 
-</div>
+    <p>
+      <strong>
+        Security:
+      </strong>
 
-</div>
+      Never send your password, OTP, seed phrase or private key
+      to anyone.
+    </p>
+
+  </div>
 
 </section>
 
@@ -736,75 +783,96 @@ Explore Courses
 <!-- FAQ -->
 <section id="faq">
 
-<div class="container">
+  <h2 class="section-title">
+    Frequently Asked Questions
+  </h2>
 
-<h2 class="section-title">
-Frequently Asked Questions
-</h2>
-
-<div class="faq">
-
-<details>
-<summary>
-Are these official university degrees?
-</summary>
-
-<p>
-No. MasteryHub provides original educational digital courses and learning materials. They are not university degrees, licenses or professional certifications.
-</p>
-
-</details>
+  <div class="faq">
 
 
-<details>
-<summary>
-How do I order a course?
-</summary>
+    <div class="faq-item">
 
-<p>
-Click the Buy Now button for your chosen course and send the requested order details by email.
-</p>
+      <h3>
+        Are these official university degrees?
+      </h3>
 
-</details>
+      <p>
+        No. MasteryHub courses are independent educational courses
+        and do not provide official university degrees or licenses.
+      </p>
 
-
-<details>
-<summary>
-When will I receive my course?
-</summary>
-
-<p>
-Digital delivery is provided after your payment has been independently verified.
-</p>
-
-</details>
+    </div>
 
 
-<details>
-<summary>
-Can customers order from outside Pakistan?
-</summary>
+    <div class="faq-item">
 
-<p>
-Yes. MasteryHub is designed for worldwide customers. Payment and delivery instructions are provided during the order process.
-</p>
+      <h3>
+        Does the Medicine course include video?
+      </h3>
 
-</details>
+      <p>
+        Yes. The Medicine & Medical Sciences package is presented
+        as a 500+ Pages PDF Course Book plus a Complete Video Course.
+      </p>
+
+    </div>
 
 
-<details>
-<summary>
-Are the courses beginner friendly?
-</summary>
+    <div class="faq-item">
 
-<p>
-Yes. Courses are structured to provide accessible foundations and practical learning.
-</p>
+      <h3>
+        Can customers order from other countries?
+      </h3>
 
-</details>
+      <p>
+        Yes. MasteryHub is designed for learners worldwide.
+      </p>
 
-</div>
-</div>
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        How do I purchase a course?
+      </h3>
+
+      <p>
+        Select a course and click Buy Now. An email order will open
+        with the course information.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        When will I receive my course?
+      </h3>
+
+      <p>
+        Course delivery takes place after the payment has been
+        received and independently verified.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        Are the courses beginner-friendly?
+      </h3>
+
+      <p>
+        Yes. Courses are structured to provide clear foundations
+        before moving into more advanced concepts.
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
@@ -812,28 +880,33 @@ Yes. Courses are structured to provide accessible foundations and practical lear
 <!-- CONTACT -->
 <section id="contact">
 
-<div class="container">
+  <h2 class="section-title">
+    Contact MasteryHub
+  </h2>
 
-<div class="cta">
+  <div class="info" style="text-align:center;">
 
-<h2>
-Contact MasteryHub
-</h2>
+    <h3>
+      Have a Question?
+    </h3>
 
-<p>
-For course orders, questions or support, contact us by email.
-</p>
+    <p>
+      For course information, orders and payment instructions,
+      contact us by email.
+    </p>
 
-<a class="btn"
-href="mailto:shahzadshoukat743@gmail.com">
+    <p class="email">
+      shahzadshoukat743@gmail.com
+    </p>
 
-shahzadshoukat743@gmail.com
+    <a
+      class="btn"
+      href="mailto:shahzadshoukat743@gmail.com?subject=MasteryHub%20Inquiry"
+    >
+      Contact Us
+    </a>
 
-</a>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
@@ -841,19 +914,16 @@ shahzadshoukat743@gmail.com
 <!-- FOOTER -->
 <footer>
 
-<div class="container footerin">
+  <p>
+    © 2026 MasteryHub. All Rights Reserved.
+  </p>
 
-<div>
-© 2026 MasteryHub. All rights reserved.
-</div>
-
-<div>
-Original Digital Learning • Worldwide
-</div>
-
-</div>
+  <p>
+    Original Digital Education Courses • Worldwide
+  </p>
 
 </footer>
+
 
 </body>
   </html>
