@@ -3,26 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MasteryHub - Premium online courses and digital education for learners worldwide.">
-<title>MasteryHub — Learn. Master. Grow.</title>
+<meta name="description" content="MasteryHub - Professional online courses, course books and video learning programs. Worldwide learning.">
+<meta name="theme-color" content="#07111f">
+<title>MasteryHub | Learn Smarter. Build Your Future.</title>
 
 <style>
-:root{
-  --bg:#050914;
-  --bg2:#09111f;
-  --card:#0b1526;
-  --card2:#0e1b2e;
-  --line:rgba(255,255,255,.09);
-  --text:#f7f9fc;
-  --muted:#9aa9bd;
-  --blue:#4f9cff;
-  --blue2:#6db0ff;
-  --cyan:#36d9ff;
-  --green:#37d99a;
-  --gold:#ffc857;
-  --shadow:0 25px 70px rgba(0,0,0,.35);
-}
-
 *{
   margin:0;
   padding:0;
@@ -34,18 +19,19 @@ html{
 }
 
 body{
-  background:
-    radial-gradient(circle at 15% 10%,rgba(79,156,255,.12),transparent 28%),
-    radial-gradient(circle at 85% 15%,rgba(54,217,255,.08),transparent 25%),
-    var(--bg);
-  color:var(--text);
-  font-family:Inter,Arial,Helvetica,sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#07111f;
+  color:#f5f7fb;
   line-height:1.6;
 }
 
 a{
   text-decoration:none;
   color:inherit;
+}
+
+button,input,select,textarea{
+  font:inherit;
 }
 
 .container{
@@ -57,17 +43,18 @@ a{
 .navbar{
   position:sticky;
   top:0;
-  z-index:999;
-  backdrop-filter:blur(18px);
-  background:rgba(5,9,20,.82);
-  border-bottom:1px solid var(--line);
+  z-index:1000;
+  background:rgba(7,17,31,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .nav-inner{
-  min-height:76px;
+  min-height:72px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
@@ -77,93 +64,83 @@ a{
 }
 
 .logo span{
-  color:var(--blue);
+  color:#55d6ff;
 }
 
 .nav-links{
   display:flex;
   align-items:center;
-  gap:28px;
+  gap:25px;
 }
 
 .nav-links a{
-  color:#cbd5e3;
+  color:#c8d2df;
   font-size:14px;
-  transition:.2s;
-}
-
-.nav-links a:hover{
-  color:white;
-}
-
-.nav-btn{
-  background:var(--blue);
-  padding:11px 18px;
-  border-radius:9px;
-  color:white!important;
   font-weight:700;
 }
 
-.menu{
+.nav-links a:hover{
+  color:#55d6ff;
+}
+
+.nav-btn{
+  background:#55d6ff;
+  color:#04101c!important;
+  padding:11px 17px;
+  border-radius:10px;
+}
+
+.menu-btn{
   display:none;
-  font-size:25px;
-  cursor:pointer;
+  background:none;
+  border:0;
+  color:white;
+  font-size:26px;
 }
 
 /* HERO */
 .hero{
-  position:relative;
-  overflow:hidden;
-  padding:105px 0 90px;
+  padding:85px 0 65px;
+  background:
+    radial-gradient(circle at 15% 15%,rgba(55,210,255,.13),transparent 30%),
+    radial-gradient(circle at 85% 20%,rgba(95,70,255,.13),transparent 30%);
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.12fr .88fr;
-  gap:60px;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
   align-items:center;
 }
 
-.eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:7px 12px;
-  border:1px solid rgba(79,156,255,.25);
-  background:rgba(79,156,255,.08);
-  border-radius:30px;
-  color:#a9ceff;
-  font-size:12px;
-  font-weight:700;
-  margin-bottom:20px;
-}
-
-.dot{
-  width:7px;
-  height:7px;
-  background:var(--green);
-  border-radius:50%;
-  box-shadow:0 0 12px var(--green);
+.badge{
+  display:inline-block;
+  border:1px solid rgba(85,214,255,.3);
+  background:rgba(85,214,255,.08);
+  color:#73ddff;
+  padding:8px 13px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:18px;
 }
 
 .hero h1{
-  font-size:clamp(43px,6vw,76px);
+  font-size:clamp(42px,6vw,72px);
   line-height:1.02;
   letter-spacing:-3px;
-  margin-bottom:23px;
+  margin-bottom:22px;
 }
 
-.gradient{
-  background:linear-gradient(90deg,#4f9cff,#36d9ff);
-  -webkit-background-clip:text;
-  color:transparent;
+.hero h1 span{
+  color:#55d6ff;
 }
 
-.hero-text{
+.hero p{
+  color:#aebccc;
   max-width:650px;
-  color:var(--muted);
   font-size:18px;
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
 .hero-buttons{
@@ -172,372 +149,305 @@ a{
   flex-wrap:wrap;
 }
 
-.primary{
-  background:linear-gradient(135deg,#4f9cff,#327ee4);
-  padding:14px 23px;
-  border-radius:10px;
+.primary-btn,
+.secondary-btn{
+  display:inline-block;
+  padding:14px 21px;
+  border-radius:12px;
   font-weight:800;
-  box-shadow:0 12px 30px rgba(79,156,255,.2);
+  cursor:pointer;
 }
 
-.secondary{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.035);
-  padding:14px 23px;
-  border-radius:10px;
-  font-weight:700;
+.primary-btn{
+  background:#55d6ff;
+  color:#03101b;
+  border:0;
 }
 
-.primary:hover,
-.secondary:hover{
-  transform:translateY(-2px);
+.secondary-btn{
+  border:1px solid rgba(255,255,255,.15);
+  color:white;
+  background:rgba(255,255,255,.04);
 }
 
-.hero-note{
-  margin-top:22px;
-  color:#73849a;
-  font-size:12px;
-}
-
-/* HERO VISUAL */
 .hero-card{
-  position:relative;
-  background:linear-gradient(145deg,rgba(16,32,55,.96),rgba(7,14,26,.98));
-  border:1px solid var(--line);
-  border-radius:25px;
+  background:linear-gradient(145deg,#101e32,#0a1526);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:24px;
   padding:25px;
-  box-shadow:var(--shadow);
-  overflow:hidden;
+  box-shadow:0 25px 80px rgba(0,0,0,.35);
 }
 
-.hero-card:before{
-  content:"";
-  position:absolute;
-  width:180px;
-  height:180px;
-  background:rgba(79,156,255,.18);
-  filter:blur(60px);
-  top:-70px;
-  right:-40px;
+.hero-dashboard{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:17px;
+  padding:22px;
+  background:#081321;
 }
 
 .dashboard-top{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:25px;
+  margin-bottom:22px;
 }
 
 .dashboard-title{
+  font-weight:900;
+}
+
+.status{
+  color:#7ff0b1;
+  font-size:12px;
   font-weight:800;
-}
-
-.live{
-  color:#65e6b0;
-  font-size:11px;
-  background:rgba(55,217,154,.1);
-  padding:6px 10px;
-  border-radius:20px;
-}
-
-.progress-box{
-  background:#08111f;
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:20px;
-  margin-bottom:14px;
-}
-
-.progress-header{
-  display:flex;
-  justify-content:space-between;
-  font-size:13px;
-  margin-bottom:12px;
 }
 
 .progress{
   height:8px;
-  background:#182538;
   border-radius:10px;
+  background:#17263a;
   overflow:hidden;
+  margin:12px 0 22px;
 }
 
-.progress span{
-  display:block;
+.progress div{
   width:78%;
   height:100%;
-  background:linear-gradient(90deg,var(--blue),var(--cyan));
-  border-radius:10px;
+  background:#55d6ff;
 }
 
-.mini-courses{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
+.dashboard-item{
+  padding:15px;
+  margin-top:10px;
+  background:#0e1d30;
+  border-radius:12px;
+  color:#c7d2df;
 }
 
-.mini{
-  background:#08111f;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:17px;
-}
-
-.mini-icon{
-  font-size:25px;
-  margin-bottom:7px;
-}
-
-.mini b{
-  display:block;
-  font-size:13px;
-}
-
-.mini small{
-  color:#718198;
-}
-
-/* TRUST BAR */
+/* TRUST */
 .trust{
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:25px 0;
-  background:rgba(255,255,255,.015);
+  border-top:1px solid rgba(255,255,255,.07);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  background:#091524;
 }
 
-.trust-row{
+.trust-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:20px;
 }
 
 .trust-item{
   text-align:center;
-  color:#9eafc3;
-  font-size:13px;
+  padding:25px 10px;
+  border-right:1px solid rgba(255,255,255,.06);
 }
 
-.trust-item strong{
+.trust-item:last-child{
+  border-right:0;
+}
+
+.trust-number{
   display:block;
-  color:white;
   font-size:25px;
-  margin-bottom:2px;
+  font-weight:900;
+  color:#55d6ff;
+}
+
+.trust-label{
+  color:#94a4b7;
+  font-size:13px;
 }
 
 /* SECTIONS */
-section{
-  padding:90px 0;
+.section{
+  padding:80px 0;
 }
 
 .section-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:30px;
-  margin-bottom:40px;
+  text-align:center;
+  max-width:750px;
+  margin:0 auto 35px;
 }
 
 .section-head h2{
-  font-size:42px;
-  line-height:1.1;
+  font-size:40px;
   letter-spacing:-1.5px;
+  margin-bottom:10px;
 }
 
 .section-head p{
-  max-width:550px;
-  color:var(--muted);
+  color:#9eacbc;
 }
 
-/* SEARCH */
-.search-area{
+/* FILTERS */
+.controls{
   display:flex;
   gap:12px;
-  margin-bottom:25px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+  justify-content:center;
 }
 
 .search{
-  flex:1;
-  background:#091321;
-  border:1px solid var(--line);
+  width:min(400px,100%);
+  padding:13px 15px;
+  border:1px solid rgba(255,255,255,.12);
+  background:#0d1a2b;
   color:white;
-  padding:14px 16px;
   border-radius:10px;
   outline:none;
-  font-size:14px;
-}
-
-.search:focus{
-  border-color:var(--blue);
-}
-
-.filters{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-bottom:35px;
 }
 
 .filter{
+  padding:12px 16px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.12);
+  background:#0d1a2b;
+  color:#c9d3df;
   cursor:pointer;
-  border:1px solid var(--line);
-  background:#091321;
-  color:#9fafc2;
-  padding:8px 14px;
-  border-radius:30px;
-  font-size:12px;
 }
 
-.filter.active,
-.filter:hover{
-  background:rgba(79,156,255,.13);
-  color:#bcdcff;
-  border-color:rgba(79,156,255,.4);
+.filter.active{
+  background:#55d6ff;
+  color:#04101c;
 }
 
-/* COURSE CARDS */
+/* COURSE GRID */
 .course-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(2,1fr);
   gap:22px;
 }
 
-.course{
+.course-card{
   position:relative;
-  background:linear-gradient(150deg,#0c1829,#08111e);
-  border:1px solid var(--line);
-  border-radius:18px;
-  overflow:hidden;
-  transition:.3s;
+  background:linear-gradient(145deg,#101d30,#0b1727);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:20px;
+  padding:25px;
+  transition:.25s ease;
 }
 
-.course:hover{
-  transform:translateY(-6px);
-  border-color:rgba(79,156,255,.42);
-  box-shadow:0 20px 55px rgba(0,0,0,.28);
-}
-
-.course-cover{
-  height:135px;
-  padding:20px;
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  background:
-    radial-gradient(circle at 80% 30%,rgba(54,217,255,.2),transparent 25%),
-    linear-gradient(135deg,#102845,#091422);
+.course-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(85,214,255,.35);
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
 }
 
 .course-number{
-  font-size:11px;
-  color:#9bcaff;
-  background:rgba(79,156,255,.1);
-  border:1px solid rgba(79,156,255,.2);
-  padding:6px 9px;
-  border-radius:20px;
+  color:#55d6ff;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
 }
 
-.course-icon{
-  font-size:42px;
-}
-
-.course-body{
-  padding:23px;
-}
-
-.course-body h3{
-  font-size:21px;
-  margin-bottom:9px;
+.course-card h3{
+  font-size:25px;
+  margin:8px 0;
 }
 
 .course-description{
-  color:#8fa1b6;
-  font-size:13px;
-  min-height:64px;
+  color:#9facbb;
+  font-size:14px;
+  min-height:48px;
 }
 
 .tags{
   display:flex;
   flex-wrap:wrap;
-  gap:6px;
-  margin:15px 0;
+  gap:7px;
+  margin:17px 0;
 }
 
 .tag{
-  font-size:10px;
-  padding:5px 7px;
-  border-radius:5px;
-  background:#10243a;
-  color:#bad8f8;
+  background:#12243a;
+  color:#aebdcb;
+  border:1px solid rgba(255,255,255,.06);
+  padding:5px 9px;
+  border-radius:7px;
+  font-size:11px;
 }
 
-.course-includes{
-  border-top:1px solid var(--line);
-  padding-top:14px;
+.includes{
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:15px;
+  margin-top:15px;
 }
 
-.course-includes p{
-  font-size:12px;
-  color:#b9c6d5;
-  margin:5px 0;
+.includes-title{
+  font-size:13px;
+  font-weight:900;
+  margin-bottom:8px;
 }
 
-.price-row{
+.includes ul{
+  list-style:none;
+  color:#aab7c6;
+  font-size:13px;
+  columns:2;
+}
+
+.includes li{
+  margin:4px 0;
+}
+
+.includes li::before{
+  content:"✓";
+  color:#55d6ff;
+  margin-right:6px;
+}
+
+.course-bottom{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:15px;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:18px;
   margin-top:18px;
 }
 
 .price{
-  font-size:27px;
+  font-size:28px;
   font-weight:900;
 }
 
-.price small{
-  font-size:11px;
-  color:#718198;
-  font-weight:normal;
+.buy-btn{
+  background:#55d6ff;
+  color:#03101b;
+  padding:12px 17px;
+  border-radius:10px;
+  font-weight:900;
+  border:0;
+  cursor:pointer;
 }
 
-.buy{
-  background:var(--blue);
-  padding:10px 15px;
-  border-radius:8px;
-  font-size:12px;
-  font-weight:800;
-}
-
-.buy:hover{
-  background:#3486e7;
-}
-
-/* WHY */
+/* BENEFITS */
 .benefits{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
 
 .benefit{
-  background:#091321;
-  border:1px solid var(--line);
-  border-radius:15px;
-  padding:25px;
+  background:#0d1a2b;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;
+  padding:24px;
 }
 
 .benefit-icon{
-  font-size:29px;
-  margin-bottom:13px;
+  font-size:28px;
+  margin-bottom:10px;
 }
 
 .benefit h3{
-  font-size:17px;
   margin-bottom:7px;
 }
 
 .benefit p{
-  color:#8798ad;
-  font-size:13px;
+  color:#98a8b9;
+  font-size:14px;
 }
 
 /* PROCESS */
@@ -547,57 +457,46 @@ section{
   gap:18px;
 }
 
-.process-card{
-  position:relative;
-  background:linear-gradient(145deg,#0b1829,#08111d);
-  border:1px solid var(--line);
+.step{
+  background:#0d1a2b;
+  padding:24px;
   border-radius:16px;
-  padding:27px;
+  border:1px solid rgba(255,255,255,.07);
 }
 
-.process-number{
-  color:#4f9cff;
+.step-num{
+  color:#55d6ff;
+  font-size:12px;
   font-weight:900;
-  font-size:13px;
 }
 
-.process-card h3{
-  margin:13px 0 8px;
+.step h3{
+  margin:8px 0;
 }
 
-.process-card p{
-  color:#899bb0;
-  font-size:13px;
+.step p{
+  color:#96a5b6;
+  font-size:14px;
 }
 
 /* CTA */
 .cta{
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 20% 50%,rgba(79,156,255,.18),transparent 30%),
-    radial-gradient(circle at 80% 40%,rgba(54,217,255,.12),transparent 28%),
-    #0a1727;
-  border:1px solid var(--line);
-  border-radius:25px;
-  padding:65px 45px;
+  padding:70px 25px;
   text-align:center;
+  border-radius:25px;
+  background:linear-gradient(135deg,#0e273b,#101a35);
+  border:1px solid rgba(85,214,255,.18);
 }
 
 .cta h2{
-  font-size:42px;
+  font-size:40px;
   margin-bottom:12px;
 }
 
 .cta p{
-  color:#9aaabd;
+  color:#9faebe;
   max-width:650px;
-  margin:auto;
-}
-
-.cta .primary{
-  display:inline-block;
-  margin-top:25px;
+  margin:0 auto 25px;
 }
 
 /* FAQ */
@@ -607,597 +506,551 @@ section{
 }
 
 .faq-item{
-  border:1px solid var(--line);
-  background:#091321;
-  border-radius:12px;
-  margin-bottom:10px;
-  overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,.09);
 }
 
 .faq-question{
-  padding:19px 21px;
+  width:100%;
+  text-align:left;
+  padding:20px 0;
+  background:none;
+  border:0;
+  color:white;
+  cursor:pointer;
+  font-weight:800;
   display:flex;
   justify-content:space-between;
-  cursor:pointer;
-  font-weight:700;
-  font-size:14px;
 }
 
 .faq-answer{
   display:none;
-  padding:0 21px 20px;
-  color:#899aaf;
-  font-size:13px;
+  color:#99a8b8;
+  padding:0 0 20px;
+  font-size:14px;
 }
 
 .faq-item.open .faq-answer{
   display:block;
 }
 
-.faq-item.open .plus{
-  transform:rotate(45deg);
-}
-
-.plus{
-  transition:.2s;
-  color:var(--blue);
-  font-size:20px;
-}
-
 /* CONTACT */
 .contact-box{
-  max-width:800px;
-  margin:auto;
-  text-align:center;
-  background:#091321;
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:45px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  background:#0d1a2b;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:18px;
+  padding:25px;
+}
+
+.contact-card p{
+  color:#9cabbc;
+  margin-top:8px;
 }
 
 .email{
-  display:inline-block;
-  margin:20px 0;
-  color:#62aaff;
+  color:#55d6ff;
   font-weight:800;
-  font-size:18px;
+  word-break:break-word;
 }
 
-.security{
-  margin-top:20px;
-  background:rgba(55,217,154,.06);
-  border:1px solid rgba(55,217,154,.15);
-  color:#9bcbb8;
-  padding:14px;
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:2000;
+  background:rgba(0,0,0,.75);
+  padding:20px;
+  overflow:auto;
+}
+
+.modal.active{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-box{
+  width:min(650px,100%);
+  background:#0c192a;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;
+  padding:28px;
+  position:relative;
+}
+
+.close{
+  position:absolute;
+  right:18px;
+  top:13px;
+  background:none;
+  border:0;
+  color:#b8c4d1;
+  font-size:27px;
+  cursor:pointer;
+}
+
+.modal-box h2{
+  margin-bottom:5px;
+}
+
+.modal-sub{
+  color:#94a5b6;
+  font-size:13px;
+  margin-bottom:22px;
+}
+
+.form-group{
+  margin-bottom:15px;
+}
+
+.form-group label{
+  display:block;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:12px;
   border-radius:9px;
+  border:1px solid rgba(255,255,255,.12);
+  background:#071321;
+  color:white;
+  outline:none;
+}
+
+.form-group textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+.selected-course{
+  background:#10253a;
+  border:1px solid rgba(85,214,255,.2);
+  border-radius:10px;
+  padding:12px;
+  margin-bottom:18px;
+}
+
+.order-note{
+  background:#111f31;
+  color:#aab8c7;
+  border-radius:10px;
+  padding:12px;
   font-size:12px;
+  margin:15px 0;
+}
+
+.submit-order{
+  width:100%;
+  padding:14px;
+  background:#55d6ff;
+  color:#03101b;
+  border:0;
+  border-radius:10px;
+  font-weight:900;
+  cursor:pointer;
 }
 
 /* FOOTER */
 footer{
-  border-top:1px solid var(--line);
   padding:35px 0;
-  color:#68788d;
-  font-size:12px;
-}
-
-.footer-row{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,.07);
+  color:#7f90a3;
+  text-align:center;
+  font-size:13px;
 }
 
 .footer-logo{
   color:white;
+  font-size:20px;
   font-weight:900;
-  font-size:18px;
-}
-
-.footer-logo span{
-  color:var(--blue);
+  margin-bottom:7px;
 }
 
 /* MOBILE */
-@media(max-width:950px){
+@media(max-width:850px){
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:72px;
+    left:0;
+    right:0;
+    background:#07111f;
+    padding:20px;
+    flex-direction:column;
+    align-items:stretch;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
 
-.hero-grid{
-  grid-template-columns:1fr;
+  .nav-links.show{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .course-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .benefits{
+    grid-template-columns:1fr;
+  }
+
+  .process{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .contact-box{
+    grid-template-columns:1fr;
+  }
 }
 
-.course-grid{
-  grid-template-columns:repeat(2,1fr);
-}
+@media(max-width:550px){
+  .hero{
+    padding:60px 0 45px;
+  }
 
-.benefits,
-.process{
-  grid-template-columns:repeat(2,1fr);
-}
+  .hero h1{
+    letter-spacing:-2px;
+  }
 
-.trust-row{
-  grid-template-columns:repeat(2,1fr);
-}
+  .section{
+    padding:60px 0;
+  }
 
-}
+  .section-head h2,
+  .cta h2{
+    font-size:31px;
+  }
 
-@media(max-width:650px){
+  .process{
+    grid-template-columns:1fr;
+  }
 
-.nav-links{
-  display:none;
-  position:absolute;
-  top:76px;
-  left:0;
-  right:0;
-  background:#07101d;
-  border-bottom:1px solid var(--line);
-  padding:20px;
-  flex-direction:column;
-  align-items:stretch;
-}
+  .includes ul{
+    columns:1;
+  }
 
-.nav-links.show{
-  display:flex;
-}
+  .course-bottom{
+    align-items:flex-start;
+    flex-direction:column;
+  }
 
-.menu{
-  display:block;
-}
+  .buy-btn{
+    width:100%;
+  }
 
-.hero{
-  padding:70px 0;
-}
-
-.hero h1{
-  letter-spacing:-2px;
-}
-
-.hero-text{
-  font-size:16px;
-}
-
-.section-head{
-  display:block;
-}
-
-.section-head h2{
-  font-size:32px;
-  margin-bottom:12px;
-}
-
-.course-grid{
-  grid-template-columns:1fr;
-}
-
-.benefits,
-.process{
-  grid-template-columns:1fr;
-}
-
-.trust-row{
-  grid-template-columns:1fr 1fr;
-}
-
-.search-area{
-  display:block;
-}
-
-.search{
-  width:100%;
-}
-
-.cta{
-  padding:45px 22px;
-}
-
-.cta h2{
-  font-size:31px;
-}
-
-.contact-box{
-  padding:30px 20px;
-}
-
+  .trust-item{
+    padding:20px 5px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-
 <!-- NAVBAR -->
 <header class="navbar">
-<div class="container nav-inner">
+  <div class="container nav-inner">
+    <a href="#" class="logo">Mastery<span>Hub</span></a>
 
-<a href="#" class="logo">Mastery<span>Hub</span></a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-<div class="menu" onclick="toggleMenu()">☰</div>
-
-<nav class="nav-links" id="navLinks">
-<a href="#courses">Courses</a>
-<a href="#why">Why MasteryHub</a>
-<a href="#how">How It Works</a>
-<a href="#faq">FAQ</a>
-<a href="#contact" class="nav-btn">Get Started</a>
-</nav>
-
-</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#courses" onclick="closeMenu()">Courses</a>
+      <a href="#how" onclick="closeMenu()">How It Works</a>
+      <a href="#faq" onclick="closeMenu()">FAQ</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+      <a href="#courses" class="nav-btn" onclick="closeMenu()">Explore Courses</a>
+    </nav>
+  </div>
 </header>
 
 
 <!-- HERO -->
 <section class="hero">
-<div class="container hero-grid">
+  <div class="container hero-grid">
 
-<div>
+    <div>
+      <span class="badge">🌍 Worldwide Learning • Digital Education</span>
 
-<div class="eyebrow">
-<span class="dot"></span>
-Premium Digital Learning • Worldwide
-</div>
+      <h1>
+        Learn Smarter.<br>
+        <span>Build Your Future.</span>
+      </h1>
 
-<h1>
-Learn Smarter.<br>
-Build Your <span class="gradient">Future.</span>
-</h1>
+      <p>
+        MasteryHub provides structured digital learning programs,
+        professional course books and video-based education designed
+        to help you build valuable knowledge and practical skills.
+      </p>
 
-<p class="hero-text">
-MasteryHub brings structured digital courses, comprehensive
-course books and video learning together in one modern
-learning platform.
-</p>
+      <div class="hero-buttons">
+        <a href="#courses" class="primary-btn">Explore Courses →</a>
+        <a href="#how" class="secondary-btn">How It Works</a>
+      </div>
+    </div>
 
-<div class="hero-buttons">
-<a href="#courses" class="primary">Explore Courses →</a>
-<a href="#how" class="secondary">How It Works</a>
-</div>
+    <div class="hero-card">
+      <div class="hero-dashboard">
 
-<div class="hero-note">
-✓ Learn at your own pace &nbsp; • &nbsp;
-✓ Worldwide access &nbsp; • &nbsp;
-✓ Digital learning
-</div>
+        <div class="dashboard-top">
+          <div class="dashboard-title">MasteryHub Learning</div>
+          <div class="status">● Online</div>
+        </div>
 
-</div>
+        <div style="color:#94a4b6;font-size:13px;">
+          Professional Digital Courses
+        </div>
 
+        <div class="progress">
+          <div></div>
+        </div>
 
-<div class="hero-card">
+        <div class="dashboard-item">📚 Course Book / PDF</div>
+        <div class="dashboard-item">🎥 Video Learning</div>
+        <div class="dashboard-item">📝 Projects & Assessments</div>
+        <div class="dashboard-item">🌍 Worldwide Access</div>
 
-<div class="dashboard-top">
-<div class="dashboard-title">Your Learning Hub</div>
-<div class="live">● ONLINE</div>
-</div>
+      </div>
+    </div>
 
-<div class="progress-box">
-
-<div class="progress-header">
-<span>Course Progress</span>
-<strong>78%</strong>
-</div>
-
-<div class="progress">
-<span></span>
-</div>
-
-</div>
-
-<div class="mini-courses">
-
-<div class="mini">
-<div class="mini-icon">🩺</div>
-<b>Medical Sciences</b>
-<small>500+ Pages</small>
-</div>
-
-<div class="mini">
-<div class="mini-icon">🤖</div>
-<b>AI & Automation</b>
-<small>Video + PDF</small>
-</div>
-
-<div class="mini">
-<div class="mini-icon">📈</div>
-<b>Digital Marketing</b>
-<small>Complete Course</small>
-</div>
-
-<div class="mini">
-<div class="mini-icon">✈️</div>
-<b>Aviation</b>
-<small>Foundation</small>
-</div>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 </section>
 
 
-<!-- TRUST -->
-<div class="trust">
-<div class="container trust-row">
+<!-- TRUST BAR -->
+<section class="trust">
+  <div class="container trust-grid">
 
-<div class="trust-item">
-<strong>10+</strong>
-Course Programs
-</div>
+    <div class="trust-item">
+      <span class="trust-number">10+</span>
+      <span class="trust-label">Course Programs</span>
+    </div>
 
-<div class="trust-item">
-<strong>500+</strong>
-Pages per Program
-</div>
+    <div class="trust-item">
+      <span class="trust-number">500+</span>
+      <span class="trust-label">Pages per Program*</span>
+    </div>
 
-<div class="trust-item">
-<strong>PDF +</strong>
-Video Learning
-</div>
+    <div class="trust-item">
+      <span class="trust-number">PDF + Video</span>
+      <span class="trust-label">Learning Format</span>
+    </div>
 
-<div class="trust-item">
-<strong>🌍</strong>
-Worldwide Learning
-</div>
+    <div class="trust-item">
+      <span class="trust-number">Worldwide</span>
+      <span class="trust-label">Customer Access</span>
+    </div>
 
-</div>
-</div>
+  </div>
+</section>
 
 
 <!-- COURSES -->
-<section id="courses">
-<div class="container">
-
-<div class="section-head">
-
-<div>
-<h2>Explore Our Courses</h2>
-</div>
-
-<p>
-Choose from professionally structured learning programs
-designed around important fields, modern skills and
-practical knowledge.
-</p>
-
-</div>
-
-
-<div class="search-area">
-<input
-class="search"
-id="search"
-type="text"
-placeholder="Search courses..."
-onkeyup="searchCourses()">
-</div>
-
-
-<div class="filters">
-
-<button class="filter active" onclick="filterCourses('all',this)">All Courses</button>
-<button class="filter" onclick="filterCourses('technology',this)">Technology</button>
-<button class="filter" onclick="filterCourses('business',this)">Business</button>
-<button class="filter" onclick="filterCourses('professional',this)">Professional</button>
-<button class="filter" onclick="filterCourses('creative',this)">Creative</button>
-
-</div>
-
-
-<div class="course-grid" id="courseGrid">
-
-
-<!-- 01 -->
-<article class="course" data-category="professional" data-name="Medicine Medical Sciences">
-
-<div class="course-cover">
-<span class="course-number">COURSE 01</span>
-<div class="course-icon">🩺</div>
-</div>
-
-<div class="course-body">
-
-<h3>Medicine & Medical Sciences</h3>
-
-<p class="course-description">
-Complete Foundation Course for learning the fundamentals
-of medical and health sciences.
-</p>
-
-<div class="tags">
-<span class="tag">📚 500+ Pages PDF</span>
-<span class="tag">🎥 Complete Video Course</span>
-<span class="tag">Foundation</span>
-</div>
-
-<div class="course-includes">
-<p>✓ 500+ Pages Course Book</p>
-<p>✓ Complete Video Course</p>
-<p>✓ MCQs & Final Assessment</p>
-</div>
-
-<div class="price-row">
-<div class="price">$49 <small>USD</small></div>
-<a class="buy" href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20Medicine%20%26%20Medical%20Sciences">Buy Now</a>
-</div>
-
-</div>
-</article>
-
-
-<!-- 02 -->
-<article class="course" data-category="technology" data-name="AI Automation Artificial Intelligence">
-
-<div class="course-cover">
-<span class="course-number">COURSE 02</span>
-<div class="course-icon">🤖</div>
-</div>
-
-<div class="course-body">
-
-<h3>AI & Automation</h3>
-
-<p class="course-description">
-Master Artificial Intelligence, Generative AI, Prompt Engineering
-and modern automation workflows.
-</p>
-
-<div class="tags">
-<span class="tag">📚 500+ Pages PDF</span>
-<span class="tag">🎥 Complete Video Course</span>
-<span class="tag">AI</span>
-</div>
-
-<div class="course-includes">
-<p>✓ 500+ Pages Course Book</p>
-<p>✓ Complete Video Course</p>
-<p>✓ Practical AI Projects</p>
-</div>
-
-<div class="price-row">
-<div class="price">$49 <small>USD</small></div>
-<a class="buy" href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20AI%20%26%20Automation">Buy Now</a>
-</div>
-
-</div>
-</article>
-
-
-<!-- 03 -->
-<article class="course" data-category="business" data-name="Digital Marketing">
-
-<div class="course-cover">
-<span class="course-number">COURSE 03</span>
-<div class="course-icon">📈</div>
-</div>
-
-<div class="course-body">
-
-<h3>Digital Marketing</h3>
-
-<p class="course-description">
-Learn modern digital marketing, SEO, social media,
-content strategy, branding and customer acquisition.
-</p>
-
-<div class="tags">
-<span class="tag">📚 500+ Pages PDF</span>
-<span class="tag">🎥 Complete Video Course</span>
-<span class="tag">Marketing</span>
-</div>
-
-<div class="course-includes">
-<p>✓ 500+ Pages Course Book</p>
-<p>✓ Complete Video Course</p>
-<p>✓ Practical Marketing Projects</p>
-</div>
-
-<div class="price-row">
-<div class="price">$39 <small>USD</small></div>
-<a class="buy" href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20Digital%20Marketing">Buy Now</a>
-</div>
-
-</div>
-</article>
-
-
-<!-- 04 -->
-<article class="course" data-category="business" data-name="Business Entrepreneurship">
-
-<div class="course-cover">
-<span class="course-number">COURSE 04</span>
-<div class="course-icon">💼</div>
-</div>
-
-<div class="course-body">
-
-<h3>Business & Entrepreneurship</h3>
-
-<p class="course-description">
-Learn business planning, entrepreneurship, marketing,
-sales, finance, leadership and growth strategy.
-</p>
-
-<div class="tags">
-<span class="tag">📚 500+ Pages PDF</span>
-<span class="tag">🎥 Complete Video Course</span>
-<span class="tag">Business</span>
-</div>
-
-<div class="course-includes">
-<p>✓ 500+ Pages Course Book</p>
-<p>✓ Complete Video Course</p>
-<p>✓ Business Projects</p>
-</div>
-
-<div class="price-row">
-<div class="price">$49 <small>USD</small></div>
-<a class="buy" href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20Business%20%26%20Entrepreneurship">Buy Now</a>
-</div>
-
-</div>
-</article>
-
-
-<!-- 05 -->
-<article class="course" data-category="business" data-name="Freelancing Blueprint">
-
-<div class="course-cover">
-<span class="course-number">COURSE 05</span>
-<div class="course-icon">💻</div>
-</div>
-
-<div class="course-body">
-
-<h3>Freelancing Blueprint</h3>
-
-<p class="course-description">
-Understand freelance services, portfolios, proposals,
-clients, pricing and professional remote work.
-</p>
-
-<div class="tags">
-<span class="tag">📚 500+ Pages PDF</span>
-<span class="tag">🎥 Complete Video Course</span>
-<span class="tag">Freelancing</span>
-</div>
-
-<div class="course-includes">
-<p>✓ 500+ Pages Course Book</p>
-<p>✓ Complete Video Course</p>
-<p>✓ Freelance Projects</p>
-</div>
-
-<div class="price-row">
-<div class="price">$39 <small>USD</small></div>
-<a class="buy" href="mailto:shahzadshoukat743@gmail.com?subject=Order%20-%20Freelancing%20Blueprint">Buy Now</a>
-</div>
-
-</div>
-</article>
-
-
-<!-- 06 -->
-<article class="course" data-category="creative" data-name="Film Content Creation">
-
-<div class="course-cover">
-<span class="course-number">COURSE 06</span>
-<div class="course-icon">🎬</div>
-</div>
-
-<div class="course-body">
-
-<h3>Film & Content Creation</h3>
-
-<p class="course-description">
-Learn storytelling, script writing, video production,
-editing and modern digital content creation.
-</p>
-
-<div class="tags">
-<span class="tag">📚 500+ Pages PDF</span>
-<span class="tag">🎥 Complete Video Course</span>
-<span class="tag">Creative</span>
-</div>
-
-<div class="course-includes">
-<p>✓ 500+ Pages Course Book</p>
-<p>
+<section class="section" id="courses">
+  <div class="container">
+
+    <div class="section-head">
+      <h2>Explore Our Courses</h2>
+      <p>
+        Choose a learning program and place your order directly
+        through MasteryHub.
+      </p>
+    </div>
+
+    <div class="controls">
+      <input
+        type="text"
+        class="search"
+        id="courseSearch"
+        placeholder="Search courses..."
+        oninput="filterCourses()"
+      >
+
+      <button class="filter active" onclick="setFilter('all',this)">All</button>
+      <button class="filter" onclick="setFilter('business',this)">Business</button>
+      <button class="filter" onclick="setFilter('technology',this)">Technology</button>
+      <button class="filter" onclick="setFilter('professional',this)">Professional</button>
+    </div>
+
+
+    <div class="course-grid" id="courseGrid">
+
+
+      <!-- COURSE 1 -->
+      <article class="course-card" data-category="professional" data-search="medicine medical sciences health anatomy">
+        <div class="course-number">COURSE 01</div>
+
+        <h3>Medicine & Medical Sciences</h3>
+
+        <p class="course-description">
+          Complete Foundation Course for learning the fundamentals
+          of medical and health sciences.
+        </p>
+
+        <div class="tags">
+          <span class="tag">📚 500+ Pages PDF</span>
+          <span class="tag">🎥 Complete Video Course</span>
+          <span class="tag">Beginner Friendly</span>
+        </div>
+
+        <div class="includes">
+          <div class="includes-title">Course Includes</div>
+          <ul>
+            <li>500+ Pages Course Book</li>
+            <li>Complete Video Course</li>
+            <li>Human Anatomy & Physiology</li>
+            <li>Cell Biology & Genetics</li>
+            <li>Tissues & Basic Histology</li>
+            <li>Musculoskeletal System</li>
+            <li>Nervous System</li>
+            <li>Cardiovascular System</li>
+            <li>Respiratory System</li>
+            <li>Digestive System</li>
+            <li>Renal & Urinary System</li>
+            <li>Endocrine System</li>
+            <li>Reproductive System</li>
+            <li>Immune System & Microbiology</li>
+            <li>Pathology Foundations</li>
+            <li>Pharmacology Foundations</li>
+            <li>Diagnostics & Laboratory Medicine</li>
+            <li>Public Health & Epidemiology</li>
+            <li>Medical Ethics</li>
+            <li>Clinical Reasoning Basics</li>
+            <li>MCQs & Final Assessment</li>
+          </ul>
+        </div>
+
+        <div class="course-bottom">
+          <div class="price">$49</div>
+          <button class="buy-btn" onclick="openOrder('Medicine & Medical Sciences','$49')">
+            Buy Now
+          </button>
+        </div>
+      </article>
+
+
+      <!-- COURSE 2 -->
+      <article class="course-card" data-category="technology" data-search="ai automation artificial intelligence technology">
+        <div class="course-number">COURSE 02</div>
+
+        <h3>AI & Automation</h3>
+
+        <p class="course-description">
+          Learn Artificial Intelligence, automation concepts,
+          AI tools, workflows and practical digital applications.
+        </p>
+
+        <div class="tags">
+          <span class="tag">📚 500+ Pages PDF</span>
+          <span class="tag">🎥 Complete Video Course</span>
+          <span class="tag">Practical</span>
+        </div>
+
+        <div class="includes">
+          <div class="includes-title">Course Includes</div>
+          <ul>
+            <li>500+ Pages Course Book</li>
+            <li>Complete Video Course</li>
+            <li>AI Fundamentals</li>
+            <li>Generative AI</li>
+            <li>Prompt Engineering</li>
+            <li>AI Productivity</li>
+            <li>AI Automation</li>
+            <li>Workflow Design</li>
+            <li>No-Code Automation</li>
+            <li>AI Business Applications</li>
+            <li>AI Content Creation</li>
+            <li>Research with AI</li>
+            <li>AI Tools Overview</li>
+            <li>Automation Projects</li>
+            <li>Practical Exercises</li>
+            <li>MCQs & Final Assessment</li>
+          </ul>
+        </div>
+
+        <div class="course-bottom">
+          <div class="price">$49</div>
+          <button class="buy-btn" onclick="openOrder('AI & Automation','$49')">
+            Buy Now
+          </button>
+        </div>
+      </article>
+
+
+      <!-- COURSE 3 -->
+      <article class="course-card" data-category="business" data-search="digital marketing marketing seo social media">
+        <div class="course-number">COURSE 03</div>
+
+        <h3>Digital Marketing</h3>
+
+        <p class="course-description">
+          Build practical digital marketing knowledge from
+          fundamentals to modern online growth strategies.
+        </p>
+
+        <div class="tags">
+          <span class="tag">📚 500+ Pages PDF</span>
+          <span class="tag">🎥 Complete Video Course</span>
+          <span class="tag">Practical</span>
+        </div>
+
+        <div class="includes">
+          <div class="includes-title">Course Includes</div>
+          <ul>
+            <li>500+ Pages Course Book</li>
+            <li>Complete Video Course</li>
+            <li>Marketing Fundamentals</li>
+            <li>Market Research</li>
+            <li>Brand Strategy</li>
+            <li>SEO Fundamentals</li>
+            <li>Social Media Marketing</li>
+            <li>Content Marketing</li>
+            <li>Email Marketing</li>
+            <li>Paid Advertising Basics</li>
+            <li>Analytics</li>
+            <li>Conversion Optimization</li>
+            <li>Marketing Funnels</li>
+            <li>Practical Projects</li>
+            <li>MCQs & Final Assessment</li>
+          </ul>
+        </div>
+
+        <div class="course-bottom">
+          <div class="price">$39</div>
+          <button class="buy-btn" onclick="openOrder('Digital Marketing','$39')">
+            Buy Now
+          </button>
+        </div>
+      </article>
+
+
+      <!-- COURSE 4 -->
+      <article class="course-card" data-category="business" data-search="business entrepreneurship management">
+        <div class="course-number">COURSE 04</div>
+
+        <h3>Business & Entrepreneurship</h3>
+
+        <p class="course-description">
+          Learn the foundations of starting, planning and growin
